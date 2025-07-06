@@ -1,0 +1,1 @@
+g++ src/testemain.cpp -o bin/testemain
