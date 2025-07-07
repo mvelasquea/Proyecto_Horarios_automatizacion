@@ -21,6 +21,7 @@ public:
 
     string getIdGrupo() const { return idGrupo; }
     bool getTipo() const { return tipo; }
+    bool esLab() const { return tipo; }
     string getDocente() const { return docente; }
     int getVacantes() const { return vacantes; }
     string getAula() const { return aula; }

@@ -73,6 +73,10 @@ public:
     void imprimir() const;
 };
 
+// -- Declaración de helper para id único --
+template <typename T>
+std::string to_id(T obj);
+
 #include "Grafo_impl.hpp"
 
 #endif

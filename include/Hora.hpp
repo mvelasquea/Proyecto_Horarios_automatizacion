@@ -9,16 +9,16 @@ private:
     int horaInicio;      // minutos desde 00:00
     int horaFin;
     string tipo;         // "TEO" o "LAB"
+    string aula;
 
 public:
-    Hora(int d, int hi, int hf, string t)
-        : dia(d), horaInicio(hi), horaFin(hf), tipo(t) {}
-
+    Hora(int d, int hi, int hf, string aula, string tipo)
+            : dia(d), horaInicio(hi), horaFin(hf), aula(aula), tipo(tipo) {}
     int getDia() const { return dia; }
     int getInicio() const { return horaInicio; }
     int getFin() const { return horaFin; }
     string getTipo() const { return tipo; }
-
+    string getAula() const { return aula; }
     bool seCruzaCon(const Hora& otro) const {
         return dia == otro.dia &&
                !(horaFin <= otro.horaInicio || horaInicio >= otro.horaFin);

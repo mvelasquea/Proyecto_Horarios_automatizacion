@@ -1,7 +1,39 @@
 #ifndef GRAFO_IMPL_HPP
 #define GRAFO_IMPL_HPP
 
-// Implementación Arista
+#include <sstream>
+#include "../Grupo.hpp"  // Asegúrate que la ruta sea correcta según tu proyecto
+
+// ------- Helpers to_id --------
+// Template general (para punteros genéricos)
+template <typename T>
+std::string to_id(T obj) {
+    std::ostringstream oss;
+    oss << reinterpret_cast<uintptr_t>(obj); // dirección en memoria (punteros)
+    return oss.str();
+}
+
+// Especialización para int (útil si usas Grafo<int>)
+template <>
+inline std::string to_id<int>(int obj) {
+    return std::to_string(obj);
+}
+
+// Especialización para std::string
+template <>
+inline std::string to_id<std::string>(std::string obj) {
+    return obj;
+}
+
+// Especialización para Grupo* (usa el id de grupo como identificador único)
+template <>
+inline std::string to_id<Grupo*>(Grupo* obj) {
+    if (!obj) return "nullptr";
+    return obj->getIdGrupo();
+}
+// --------------------------------
+
+// ---- Implementación de métodos Arista ----
 
 template <typename T>
 Arista<T>::Arista(T origen, T destino, bool dirigido, double peso) noexcept
@@ -14,7 +46,7 @@ vector<T> Arista<T>::obtenerVertices() const {
 
 template <typename T>
 string Arista<T>::toString() const {
-    return std::to_string(origen) + "-" + std::to_string(destino);
+    return to_id(origen) + "-" + to_id(destino);
 }
 
 template <typename T>
@@ -54,7 +86,7 @@ bool Arista<T>::operator<(const Arista<T>& a) const {
     return toString() < a.toString();
 }
 
-// Implementación Grafo
+// ---- Implementación Grafo ----
 
 template <typename T>
 Grafo<T>::Grafo(bool dirigido) noexcept
@@ -62,9 +94,9 @@ Grafo<T>::Grafo(bool dirigido) noexcept
 
 template <typename T>
 string Grafo<T>::hashArista(const Arista<T>& a) const {
-    if (!dirigido_ && a.origen > a.destino)
-        return to_string(a.destino) + "-" + to_string(a.origen);
-    return to_string(a.origen) + "-" + to_string(a.destino);
+    if (!dirigido_ && to_id(a.origen) > to_id(a.destino))
+        return to_id(a.destino) + "-" + to_id(a.origen);
+    return to_id(a.origen) + "-" + to_id(a.destino);
 }
 
 template <typename T>
@@ -209,9 +241,9 @@ bool Grafo<T>::existeCiclo() const {
 template <typename T>
 void Grafo<T>::imprimir() const {
     for (const T& v : vertices_) {
-        cout << v << ": ";
+        cout << to_id(v) << ": ";
         for (const T& vecino : obtenerVecinos(v))
-            cout << vecino << " ";
+            cout << to_id(vecino) << " ";
         cout << "\n";
     }
 }
