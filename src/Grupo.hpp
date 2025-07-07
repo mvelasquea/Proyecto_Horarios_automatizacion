@@ -8,23 +8,23 @@ using namespace std;
 class Grupo {
 private:
     string idGrupo;
+    bool tipo;        // false = teórico, true = laboratorio
     vector<Hora> horas;
     string docente;
     int vacantes;
-    bool disponible;
-    bool esLaboratorio;
-    string vinculadoA;  // ID del grupo TEO asociado, si es LAB
+    string aula;
+    int cupoDocente;
 
 public:
-    Grupo(string id, string doc, int vac, bool dispo, bool esLab, string vinc = "")
-        : idGrupo(id), docente(doc), vacantes(vac), disponible(dispo), esLaboratorio(esLab), vinculadoA(vinc) {}
+    Grupo(string id, bool t, const string& doc, int vac, const string& aula_, int cupo)
+        : idGrupo(id), tipo(t), docente(doc), vacantes(vac), aula(aula_), cupoDocente(cupo) {}
 
     string getIdGrupo() const { return idGrupo; }
+    bool getTipo() const { return tipo; }
     string getDocente() const { return docente; }
     int getVacantes() const { return vacantes; }
-    bool estaDisponible() const { return disponible; }
-    bool esLab() const { return esLaboratorio; }
-    string getGrupoVinculado() const { return vinculadoA; }
+    string getAula() const { return aula; }
+    int getCupoDocente() const { return cupoDocente; }
     const vector<Hora>& getHoras() const { return horas; }
 
     void agregarHora(const Hora& h) {

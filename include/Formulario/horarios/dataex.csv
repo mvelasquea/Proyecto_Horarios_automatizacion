@@ -1,0 +1,230 @@
+curso_codigo,nombre,creditos,ciclo,prerrequisitos,grupo_id,tipo,docente,vacantes,aula,dia_hora,cupo_docente
+1701102,Razonamiento Logico Matematico,3,1,,1701102-TA,0,Ing. Castro,30,A101,1_08:00-10:00;2_10:00-12:00,40
+1701102,Razonamiento Logico Matematico,3,1,,1701102-TB,0,Ing. Medina,30,A102,2_08:00-10:00;3_10:00-12:00,40
+1701102,Razonamiento Logico Matematico,3,1,,1701102-TC,0,Ing. Ruiz,30,A103,3_08:00-10:00;4_10:00-12:00,40
+1701103,Matematica Basica,4,1,,1701103-TA,0,Ing. Lopez,30,A104,1_08:00-10:00;2_08:00-10:00,40
+1701103,Matematica Basica,4,1,,1701103-TB,0,Ing. Castro,30,A105,2_08:00-10:00;3_08:00-10:00,40
+1701103,Matematica Basica,4,1,,1701103-TC,0,Ing. Medina,30,A106,3_08:00-10:00;4_08:00-10:00,40
+1701104,Estructuras Discretas I,3,1,,1701104-TA,0,Ing. Ruiz,30,A101,1_10:00-11:30;2_10:00-11:30,40
+1701104,Estructuras Discretas I,3,1,,1701104-TB,0,Ing. Lopez,30,A102,2_10:00-11:30;3_10:00-11:30,40
+1701104,Estructuras Discretas I,3,1,,1701104-TC,0,Ing. Castro,30,A103,3_10:00-11:30;4_10:00-11:30,40
+1701105,Introduccion a la Computacion,2,1,,1701105-TA,0,Ing. Medina,30,A104,1_14:00-15:30;2_14:00-15:30,40
+1701105,Introduccion a la Computacion,2,1,,1701105-TB,0,Ing. Ruiz,30,A105,2_14:00-15:30;3_14:00-15:30,40
+1701105,Introduccion a la Computacion,2,1,,1701105-TC,0,Ing. Lopez,30,A106,3_14:00-15:30;4_14:00-15:30,40
+1701114,Metodologia del Trabajo Intelectual Universitario,2,1,,1701114-TA,0,Ing. Castro,30,A101,1_08:00-10:00;2_08:00-10:00,40
+1701114,Metodologia del Trabajo Intelectual Universitario,2,1,,1701114-TB,0,Ing. Medina,30,A102,2_08:00-10:00;3_08:00-10:00,40
+1701114,Metodologia del Trabajo Intelectual Universitario,2,1,,1701114-TC,0,Ing. Ruiz,30,A103,3_08:00-10:00;4_08:00-10:00,40
+1701145,Relaciones Humanas en Empresas de Desarrollo de Software y Base Tecnologica,2,1,,1701145-TA,0,Ing. Lopez,30,A104,1_14:00-16:00;2_14:00-16:00,40
+1701145,Relaciones Humanas en Empresas de Desarrollo de Software y Base Tecnologica,2,1,,1701145-TB,0,Ing. Castro,30,A105,2_14:00-16:00;3_14:00-16:00,40
+1701145,Relaciones Humanas en Empresas de Desarrollo de Software y Base Tecnologica,2,1,,1701145-TC,0,Ing. Medina,30,A106,3_14:00-16:00;4_14:00-16:00,40
+
+1701210,Calculo en una Variable,4,2,1701103,1701210-TA,0,Ing. Ruiz,30,A101,1_08:00-10:00;2_08:00-10:00,40
+1701210,Calculo en una Variable,4,2,1701103,1701210-TB,0,Ing. Lopez,30,A102,2_08:00-10:00;3_08:00-10:00,40
+1701210,Calculo en una Variable,4,2,1701103,1701210-TC,0,Ing. Castro,30,A103,3_08:00-10:00;4_08:00-10:00,40
+
+1701211,Estructuras Discretas 2,3,2,1701104,1701211-TA,0,Ing. Medina,30,A104,1_10:00-11:30;2_10:00-11:30,40
+1701211,Estructuras Discretas 2,3,2,1701104,1701211-TB,0,Ing. Ruiz,30,A105,2_10:00-11:30;3_10:00-11:30,40
+1701211,Estructuras Discretas 2,3,2,1701104,1701211-TC,0,Ing. Lopez,30,A106,3_10:00-11:30;4_10:00-11:30,40
+
+1701212,Programacion Web 1,4,2,1701106,1701212-TA,0,Ing. Castro,30,A201,1_14:00-16:00;2_14:00-16:00,40
+1701212,Programacion Web 1,4,2,1701106,1701212-TB,0,Ing. Medina,30,A202,2_14:00-16:00;3_14:00-16:00,40
+1701212,Programacion Web 1,4,2,1701106,1701212-TC,0,Ing. Ruiz,30,A203,3_14:00-16:00;4_14:00-16:00,40
+1701212,Programacion Web 1,4,2,1701106,1701212-LA,1,Ing. Lopez,15,A204,5_14:00-16:00,40
+1701212,Programacion Web 1,4,2,1701106,1701212-LB,1,Ing. Castro,15,A205,1_14:00-16:00,40
+1701212,Programacion Web 1,4,2,1701106,1701212-LC,1,Ing. Medina,15,A206,2_14:00-16:00,40
+
+1701213,Fundamentos de Programacion 2,5,2,1701106,1701213-TA,0,Ing. Ruiz,30,A101,1_08:00-10:00;2_08:00-10:00,40
+1701213,Fundamentos de Programacion 2,5,2,1701106,1701213-TB,0,Ing. Lopez,30,A102,2_08:00-10:00;3_08:00-10:00,40
+1701213,Fundamentos de Programacion 2,5,2,1701106,1701213-TC,0,Ing. Castro,30,A103,3_08:00-10:00;4_08:00-10:00,40
+1701213,Fundamentos de Programacion 2,5,2,1701106,1701213-LA,1,Ing. Medina,15,A104,5_14:00-16:00,40
+1701213,Fundamentos de Programacion 2,5,2,1701106,1701213-LB,1,Ing. Ruiz,15,A105,1_14:00-16:00,40
+1701213,Fundamentos de Programacion 2,5,2,1701106,1701213-LC,1,Ing. Lopez,15,A106,2_14:00-16:00,40
+
+1701216,Comunicacion Integral,3,2,,1701216-TA,0,Ing. Castro,30,A201,1_10:00-12:00;2_10:00-12:00,,40
+1701216,Comunicacion Integral,3,2,,1701216-TB,0,Ing. Medina,30,A202,2_10:00-12:00;Mie-10:00-12:00,,40
+1701216,Comunicacion Integral,3,2,,1701216-TC,0,Ing. Ruiz,30,A203,Mie-10:00-12:00;4_10:00-12:00,,40
+
+1701217,Realidad Nacional,2,2,,1701217-TA,0,Ing. Lopez,30,A204,1_14:00-16:00;2_14:00-16:00,,40
+1701217,Realidad Nacional,2,2,,1701217-TB,0,Ing. Castro,30,A205,2_14:00-16:00;Mie-14:00-16:00,,40
+1701217,Realidad Nacional,2,2,,1701217-TC,0,Ing. Medina,30,A206,Mie-14:00-16:00;4_14:00-16:00,,40
+
+1702118,Talleres de Psicologia,2,3,,1702118-TA,0,Ing. Ruiz,30,A101,1_08:00-10:00;2_08:00-10:00,,40
+1702118,Talleres de Psicologia,2,3,,1702118-TB,0,Ing. Lopez,30,A102,2_08:00-10:00;Mie-08:00-10:00,,40
+1702118,Talleres de Psicologia,2,3,,1702118-TC,0,Ing. Castro,30,A103,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1702119,Calculo en Varias Variables,4,3,1701210,1702119-TA,0,Ing. Medina,30,A104,1_08:00-10:00;2_08:00-10:00,,40
+1702119,Calculo en Varias Variables,4,3,1701210,1702119-TB,0,Ing. Ruiz,30,A105,2_08:00-10:00;Mie-08:00-10:00,,40
+1702119,Calculo en Varias Variables,4,3,1701210,1702119-TC,0,Ing. Lopez,30,A106,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1702120,Taller de Liderazgo y Colaboracion,2,3,1701145,1702120-TA,0,Ing. Castro,30,A201,1_10:00-11:30;2_10:00-11:30,,40
+1702120,Taller de Liderazgo y Colaboracion,2,3,1701145,1702120-TB,0,Ing. Medina,30,A202,2_10:00-11:30;Mie-10:00-11:30,,40
+1702120,Taller de Liderazgo y Colaboracion,2,3,1701145,1702120-TC,0,Ing. Ruiz,30,A203,Mie-10:00-11:30;4_10:00-11:30,,40
+
+1702121,Innovacion y Creatividad,3,3,,1702121-TA,0,Ing. Lopez,30,A204,1_14:00-16:00;2_14:00-16:00,,40
+1702121,Innovacion y Creatividad,3,3,,1702121-TB,0,Ing. Castro,30,A205,2_14:00-16:00;Mie-14:00-16:00,,40
+1702121,Innovacion y Creatividad,3,3,,1702121-TC,0,Ing. Medina,30,A206,Mie-14:00-16:00;4_14:00-16:00,,40
+
+1702122,Programacion Web 2,4,3,1701212,1702122-TA,0,Ing. Ruiz,30,A101,1_08:00-10:00;2_08:00-10:00,,40
+1702122,Programacion Web 2,4,3,1701212,1702122-TB,0,Ing. Lopez,30,A102,2_08:00-10:00;Mie-08:00-10:00,,40
+1702122,Programacion Web 2,4,3,1701212,1702122-TC,0,Ing. Castro,30,A103,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1702123,Redaccion de Articulos e Informes de Investigacion,2,3,,1702123-TA,0,Ing. Medina,30,A104,1_10:00-11:30;2_10:00-11:30,,40
+1702123,Redaccion de Articulos e Informes de Investigacion,2,3,,1702123-TB,0,Ing. Ruiz,30,A105,2_10:00-11:30;Mie-10:00-11:30,,40
+1702123,Redaccion de Articulos e Informes de Investigacion,2,3,,1702123-TC,0,Ing. Lopez,30,A106,Mie-10:00-11:30;4_10:00-11:30,,40
+
+1702124,Estructura de Datos y Algoritmos,4,3,1701211;1701213,1702124-TA,0,Ing. Castro,30,A201,1_08:00-10:00;2_08:00-10:00,,40
+1702124,Estructura de Datos y Algoritmos,4,3,1701211;1701213,1702124-TB,0,Ing. Medina,30,A202,2_08:00-10:00;Mie-08:00-10:00,,40
+1702124,Estructura de Datos y Algoritmos,4,3,1701211;1701213,1702124-TC,0,Ing. Ruiz,30,A203,Mie-08:00-10:00;4_08:00-10:00,,40
+1702124,Estructura de Datos y Algoritmos,4,3,1701211;1701213,1702124-LA,1,Ing. Lopez,15,A204,5_14:00-16:00,1702124-TA,40
+1702124,Estructura de Datos y Algoritmos,4,3,1701211;1701213,1702124-LB,1,Ing. Castro,15,A205,1_14:00-16:00,1702124-TA,40
+1702124,Estructura de Datos y Algoritmos,4,3,1701211;1701213,1702124-LC,1,Ing. Medina,15,A206,2_14:00-16:00,1702124-TA,40
+
+1702125,Ciudadania e Interculturalidad,2,3,,1702125-TA,0,Ing. Ruiz,30,A101,1_08:00-10:00;2_08:00-10:00,,40
+1702125,Ciudadania e Interculturalidad,2,3,,1702125-TB,0,Ing. Lopez,30,A102,2_08:00-10:00;Mie-08:00-10:00,,40
+1702125,Ciudadania e Interculturalidad,2,3,,1702125-TC,0,Ing. Castro,30,A103,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1702226,Estadistica Matematica, Probabilidades y Metodos Empiricos,4,4,1702119,1702226-TA,0,Ing. Medina,30,A104,1_10:00-12:00;2_10:00-12:00,,40
+1702226,Estadistica Matematica, Probabilidades y Metodos Empiricos,4,4,1702119,1702226-TB,0,Ing. Ruiz,30,A105,2_10:00-12:00;Mie-10:00-12:00,,40
+1702226,Estadistica Matematica, Probabilidades y Metodos Empiricos,4,4,1702119,1702226-TC,0,Ing. Lopez,30,A106,Mie-10:00-12:00;4_10:00-12:00,,40
+
+1702227,Arquitectura de Computadoras,3,4,1702124,1702227-TA,0,Ing. Castro,30,A201,1_08:00-09:30;2_08:00-09:30,,40
+1702227,Arquitectura de Computadoras,3,4,1702124,1702227-TB,0,Ing. Medina,30,A202,2_08:00-09:30;Mie-08:00-09:30,,40
+1702227,Arquitectura de Computadoras,3,4,1702124,1702227-TC,0,Ing. Ruiz,30,A203,Mie-08:00-09:30;4_08:00-09:30,,40
+
+1702228,Metodos de Investigacion y Redaccion,2,4,1702123,1702228-TA,0,Ing. Lopez,30,A204,1_14:00-15:30;2_14:00-15:30,,40
+1702228,Metodos de Investigacion y Redaccion,2,4,1702123,1702228-TB,0,Ing. Castro,30,A205,2_14:00-15:30;Mie-14:00-15:30,,40
+1702228,Metodos de Investigacion y Redaccion,2,4,1702123,1702228-TC,0,Ing. Medina,30,A206,Mie-14:00-15:30;4_14:00-15:30,,40
+
+1702229,Interaccion Humano Computador,4,4,1702118;1702122,1702229-TA,0,Ing. Ruiz,30,A101,1_08:00-10:00;2_08:00-10:00,,40
+1702229,Interaccion Humano Computador,4,4,1702118;1702122,1702229-TB,0,Ing. Lopez,30,A102,2_08:00-10:00;Mie-08:00-10:00,,40
+1702229,Interaccion Humano Computador,4,4,1702118;1702122,1702229-TC,0,Ing. Castro,30,A103,Mie-08:00-10:00;4_08:00-10:00,,40
+1702229,Interaccion Humano Computador,4,4,1702118;1702122,1702229-LA,1,Ing. Medina,15,A104,5_14:00-16:00,1702229-TA,40
+1702229,Interaccion Humano Computador,4,4,1702118;1702122,1702229-LB,1,Ing. Ruiz,15,A105,1_14:00-16:00,1702229-TA,40
+1702229,Interaccion Humano Computador,4,4,1702118;1702122,1702229-LC,1,Ing. Lopez,15,A106,2_14:00-16:00,1702229-TA,40
+
+1702230,Enfoque Empresarial,3,4,1702120,1702230-TA,0,Ing. Castro,30,A201,1_10:00-11:30;2_10:00-11:30,,40
+1702230,Enfoque Empresarial,3,4,1702120,1702230-TB,0,Ing. Medina,30,A202,2_10:00-11:30;Mie-10:00-11:30,,40
+1702230,Enfoque Empresarial,3,4,1702120,1702230-TC,0,Ing. Ruiz,30,A203,Mie-10:00-11:30;4_10:00-11:30,,40
+
+1702231,Analisis y Diseno de Algoritmos,4,4,1702124,1702231-TA,0,Ing. Lopez,30,A204,1_14:00-16:00;2_14:00-16:00,,40
+1702231,Analisis y Diseno de Algoritmos,4,4,1702124,1702231-TB,0,Ing. Castro,30,A205,2_14:00-16:00;Mie-14:00-16:00,,40
+1702231,Analisis y Diseno de Algoritmos,4,4,1702124,1702231-TC,0,Ing. Medina,30,A206,Mie-14:00-16:00;4_14:00-16:00,,40
+
+1702278,Ecologia y Conservacion Ambiental,2,4,,1702278-TA,0,Ing. Ruiz,30,A101,1_08:00-10:00;2_08:00-10:00,,40
+1702278,Ecologia y Conservacion Ambiental,2,4,,1702278-TB,0,Ing. Lopez,30,A102,2_08:00-10:00;Mie-08:00-10:00,,40
+1702278,Ecologia y Conservacion Ambiental,2,4,,1702278-TC,0,Ing. Castro,30,A103,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1703133,Base de Datos,4,5,1702230,1703133-TA,0,Ing. Medina,30,A104,1_10:00-12:00;2_10:00-12:00,,40
+1703133,Base de Datos,4,5,1702230,1703133-TB,0,Ing. Ruiz,30,A105,2_10:00-12:00;Mie-10:00-12:00,,40
+1703133,Base de Datos,4,5,1702230,1703133-TC,0,Ing. Lopez,30,A106,Mie-10:00-12:00;4_10:00-12:00,,40
+1703133,Base de Datos,4,5,1702230,1703133-LA,1,Ing. Castro,15,A201,5_14:00-16:00,1703133-TA,40
+1703133,Base de Datos,4,5,1702230,1703133-LB,1,Ing. Medina,15,A202,1_14:00-16:00,1703133-TA,40
+1703133,Base de Datos,4,5,1702230,1703133-LC,1,Ing. Ruiz,15,A203,2_14:00-16:00,1703133-TA,40
+
+1703134,Programacion de Sistemas,4,5,1702227,1703134-TA,0,Ing. Lopez,30,A204,1_08:00-10:00;2_08:00-10:00,,40
+1703134,Programacion de Sistemas,4,5,1702227,1703134-TB,0,Ing. Castro,30,A205,2_08:00-10:00;Mie-08:00-10:00,,40
+1703134,Programacion de Sistemas,4,5,1702227,1703134-TC,0,Ing. Medina,30,A206,Mie-08:00-10:00;4_08:00-10:00,,40
+1703134,Programacion de Sistemas,4,5,1702227,1703134-LA,1,Ing. Ruiz,15,A101,5_14:00-16:00,1703134-TA,40
+1703134,Programacion de Sistemas,4,5,1702227,1703134-LB,1,Ing. Lopez,15,A102,1_14:00-16:00,1703134-TA,40
+1703134,Programacion de Sistemas,4,5,1702227,1703134-LC,1,Ing. Castro,15,A103,2_14:00-16:00,1703134-TA,40
+
+1703135,Ingenieria y Procesos de Software,3,5,1702229,1703135-TA,0,Ing. Medina,30,A104,1_10:00-12:00;2_10:00-12:00,,40
+1703135,Ingenieria y Procesos de Software,3,5,1702229,1703135-TB,0,Ing. Ruiz,30,A105,2_10:00-12:00;Mie-10:00-12:00,,40
+1703135,Ingenieria y Procesos de Software,3,5,1702229,1703135-TC,0,Ing. Lopez,30,A106,Mie-10:00-12:00;4_10:00-12:00,,40
+
+1703136,Teoria de la Computacion,3,5,1702231,1703136-TA,0,Ing. Castro,30,A201,1_14:00-16:00;2_14:00-16:00,,40
+1703136,Teoria de la Computacion,3,5,1702231,1703136-TB,0,Ing. Medina,30,A202,2_14:00-16:00;Mie-14:00-16:00,,40
+1703136,Teoria de la Computacion,3,5,1702231,1703136-TC,0,Ing. Ruiz,30,A203,Mie-14:00-16:00;4_14:00-16:00,,40
+
+1703137,Organizacion y Metodos,3,5,1702230,1703137-TA,0,Ing. Lopez,30,A204,1_08:00-10:00;2_08:00-10:00,,40
+1703137,Organizacion y Metodos,3,5,1702230,1703137-TB,0,Ing. Castro,30,A205,2_08:00-10:00;Mie-08:00-10:00,,40
+1703137,Organizacion y Metodos,3,5,1702230,1703137-TC,0,Ing. Medina,30,A206,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1703138,Investigacion de Operaciones,4,5,1702119,1703138-TA,0,Ing. Ruiz,30,A101,1_10:00-12:00;2_10:00-12:00,,40
+1703138,Investigacion de Operaciones,4,5,1702119,1703138-TB,0,Ing. Lopez,30,A102,2_10:00-12:00;Mie-10:00-12:00,,40
+1703138,Investigacion de Operaciones,4,5,1702119,1703138-TC,0,Ing. Castro,30,A103,Mie-10:00-12:00;4_10:00-12:00,,40
+1703138,Investigacion de Operaciones,4,5,1702119,1703138-LA,1,Ing. Medina,15,A104,5_14:00-16:00,1703138-TA,40
+1703138,Investigacion de Operaciones,4,5,1702119,1703138-LB,1,Ing. Ruiz,15,A105,1_14:00-16:00,1703138-TA,40
+1703138,Investigacion de Operaciones,4,5,1702119,1703138-LC,1,Ing. Lopez,15,A106,2_14:00-16:00,1703138-TA,40
+
+1703239,Redes y Comunicacion de Datos,4,6,1702227,1703239-TA,0,Ing. Castro,30,A201,1_08:00-10:00;2_08:00-10:00,,40
+1703239,Redes y Comunicacion de Datos,4,6,1702227,1703239-TB,0,Ing. Medina,30,A202,2_08:00-10:00;Mie-08:00-10:00,,40
+1703239,Redes y Comunicacion de Datos,4,6,1702227,1703239-TC,0,Ing. Ruiz,30,A203,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1703240,Tecnologia de Objetos,4,6,1703135,1703240-TA,0,Ing. Lopez,30,A204,1_14:00-16:00;2_14:00-16:00,,40
+1703240,Tecnologia de Objetos,4,6,1703135,1703240-TB,0,Ing. Castro,30,A205,2_14:00-16:00;Mie-14:00-16:00,,40
+1703240,Tecnologia de Objetos,4,6,1703135,1703240-TC,0,Ing. Medina,30,A206,Mie-14:00-16:00;4_14:00-16:00,,40
+
+1703241,Sistemas Operativos,4,6,1703134,1703241-TA,0,Ing. Ruiz,30,A101,1_08:00-10:00;2_08:00-10:00,,40
+1703241,Sistemas Operativos,4,6,1703134,1703241-TB,0,Ing. Lopez,30,A102,2_08:00-10:00;Mie-08:00-10:00,,40
+1703241,Sistemas Operativos,4,6,1703134,1703241-TC,0,Ing. Castro,30,A103,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1703242,Fundamentos de Sistemas de Informacion,3,6,1703133;1703137,1703242-TA,0,Ing. Medina,30,A104,1_10:00-12:00;2_10:00-12:00,,40
+1703242,Fundamentos de Sistemas de Informacion,3,6,1703133;1703137,1703242-TB,0,Ing. Ruiz,30,A105,2_10:00-12:00;Mie-10:00-12:00,,40
+1703242,Fundamentos de Sistemas de Informacion,3,6,1703133;1703137,1703242-TC,0,Ing. Lopez,30,A106,Mie-10:00-12:00;4_10:00-12:00,,40
+
+1703243,Construccion de Software,4,6,1703135;1703136,1703243-TA,0,Ing. Castro,30,A201,1_14:00-16:00;2_14:00-16:00,,40
+1703243,Construccion de Software,4,6,1703135;1703136,1703243-TB,0,Ing. Medina,30,A202,2_14:00-16:00;Mie-14:00-16:00,,40
+1703243,Construccion de Software,4,6,1703135;1703136,1703243-TC,0,Ing. Ruiz,30,A203,Mie-14:00-16:00;4_14:00-16:00,,40
+
+1703244,Metodos Numericos,3,6,1703138,1703244-TA,0,Ing. Lopez,30,A204,1_08:00-10:00;2_08:00-10:00,,40
+1703244,Metodos Numericos,3,6,1703138,1703244-TB,0,Ing. Castro,30,A205,2_08:00-10:00;Mie-08:00-10:00,,40
+1703244,Metodos Numericos,3,6,1703138,1703244-TC,0,Ing. Medina,30,A206,Mie-08:00-10:00;4_08:00-10:00,,40
+
+1704146,Fisica Computacional,3,7,1703244,1704146-TA,0,Ing. Ruiz,30,A101,1_10:00-11:30;2_10:00-11:30,,40
+1704146,Fisica Computacional,3,7,1703244,1704146-TB,0,Ing. Lopez,30,A102,2_10:00-11:30;Mie-10:00-11:30,,40
+1704146,Fisica Computacional,3,7,1703244,1704146-TC,0,Ing. Castro,30,A103,Mie-10:00-11:30;4_10:00-11:30,,40
+
+1704147,Tecnologias de Informacion,4,7,1703242,1704147-TA,0,Ing. Medina,30,A104,1_08:00-10:00;2_08:00-10:00,,40
+1704147,Tecnologias de Informacion,4,7,1703242,1704147-TB,0,Ing. Ruiz,30,A105,2_08:00-10:00;Mie-08:00-10:00,,40
+1704147,Tecnologias de Informacion,4,7,1703242,1704147-TC,0,Ing. Lopez,30,A106,Mie-08:00-10:00;4_08:00-10:00,,40
+1704147,Tecnologias de Informacion,4,7,1703242,1704147-LA,1,Ing. Castro,15,A201,5_14:00-16:00,1704147-TA,40
+1704147,Tecnologias de Informacion,4,7,1703242,1704147-LB,1,Ing. Medina,15,A202,1_14:00-16:00,1704147-TA,40
+1704147,Tecnologias de Informacion,4,7,1703242,1704147-LC,1,Ing. Ruiz,15,A203,2_14:00-16:00,1704147-TA,40
+
+1704148,Inteligencia Artificial,3,7,1702226,1704148-TA,0,Ing. Lopez,30,A204,1_10:00-12:00;2_10:00-12:00,,40
+1704148,Inteligencia Artificial,3,7,1702226,1704148-TB,0,Ing. Castro,30,A205,2_10:00-12:00;Mie-10:00-12:00,,40
+1704148,Inteligencia Artificial,3,7,1702226,1704148-TC,0,Ing. Medina,30,A206,Mie-10:00-12:00;4_10:00-12:00,,40
+
+1704149,Ingenieria de Requerimientos,4,7,1703240,1704149-TA,0,Ing. Ruiz,30,A101,1_14:00-16:00;2_14:00-16:00,,40
+1704149,Ingenieria de Requerimientos,4,7,1703240,1704149-TB,0,Ing. Lopez,30,A102,2_14:00-16:00;Mie-14:00-16:00,,40
+1704149,Ingenieria de Requerimientos,4,7,1703240,1704149-TC,0,Ing. Castro,30,A103,Mie-14:00-16:00;4_14:00-16:00,,40
+1704149,Ingenieria de Requerimientos,4,7,1703240,1704149-LA,1,Ing. Medina,15,A104,5_14:00-16:00,1704149-TA,40
+1704149,Ingenieria de Requerimientos,4,7,1703240,1704149-LB,1,Ing. Ruiz,15,A105,1_14:00-16:00,1704149-TA,40
+1704149,Ingenieria de Requerimientos,4,7,1703240,1704149-LC,1,Ing. Lopez,15,A106,2_14:00-16:00,1704149-TA,40
+
+1704150,Sistemas Distribuidos,4,7,1703239,1704150-TA,0,Ing. Castro,30,A201,1_08:00-10:00;2_08:00-10:00,,40
+1704150,Sistemas Distribuidos,4,7,1703239,1704150-TB,0,Ing. Medina,30,A202,2_08:00-10:00;Mie-08:00-10:00,,40
+1704150,Sistemas Distribuidos,4,7,1703239,1704150-TC,0,Ing. Ruiz,30,A203,Mie-08:00-10:00;4_08:00-10:00,,40
+1704150,Sistemas Distribuidos,4,7,1703239,1704150-LA,1,Ing. Lopez,15,A204,5_14:00-16:00,1704150-TA,40
+1704150,Sistemas Distribuidos,4,7,1703239,1704150-LB,1,Ing. Castro,15,A205,1_14:00-16:00,1704150-TA,40
+1704150,Sistemas Distribuidos,4,7,1703239,1704150-LC,1,Ing. Medina,15,A206,2_14:00-16:00,1704150-TA,40
+
+1704151,Pruebas de Software,3,7,1703243,1704151-TA,0,Ing. Ruiz,30,A101,1_10:00-11:30;2_10:00-11:30,,40
+1704151,Pruebas de Software,3,7,1703243,1704151-TB,0,Ing. Lopez,30,A102,2_10:00-11:30;Mie-10:00-11:30,,40
+1704151,Pruebas de Software,3,7,1703243,1704151-TC,0,Ing. Castro,30,A103,Mie-10:00-11:30;4_10:00-11:30,,40
+
+1704153,Ingles,2,7,,1704153-TA,0,Ing. Medina,30,A104,1_14:00-16:00;2_14:00-16:00,,40
+1704153,Ingles,2,7,,1704153-TB,0,Ing. Ruiz,30,A105,2_14:00-16:00;Mie-14:00-16:00,,40
+1704153,Ingles,2,7,,1704153-TC,0,Ing. Lopez,30,A106,Mie-14:00-16:00;4_14:00-16:00,,40
+
+1704252,Gestion de Proyectos de Software,3,8,1704149,1704252-TA,0,Ing. Castro,30,A201,1_08:00-10:00;2_08:00-10:00,,40
+1704252,Gestion de Proyectos de Software,3,8,1704149,1704252-TB,0,Ing. Medina,30,A202,2_08:00-10:00;Mie-08:00-10:00,,40
+1704252,Gestion de Proyectos de Software,3,8,1704149,1704252-TC,0,Ing. Ruiz,30,A203,Mie-08:00-10:00;4_08:00-10:00,,40
+1704252,Gestion de Proyectos de Software,3,8,1704149,1704252-LA,1,Ing. Lopez,15,A204,5_14:00-16:00,1704252-TA,40
+1704252,Gestion de Proyectos de Software,3,8,1704149,1704252-LB,1,Ing. Castro,15,A205,1_14:00-16:00,1704252-TA,40
+1704252,Gestion de Proyectos de Software,3,8,1704149,1704252-LC,1,Ing. Medina,15,A206,2_14:00-16:00,1704252-TA,40
+
+1704254,Calidad de Software,3,8,1704151,1704254-TA,0,Ing. Ruiz,30,A101,1_10:00-12:00;2_10:00-12:00,,40
+1704254,Calidad de Software,3,8,1704151,1704254-TB,0,Ing. Lopez,30,A102,2_10:00-12:00;Mie-10:00-12:00,,40
+1704254,Calidad de Software,3,8,1704151,1704254-TC,0,Ing. Castro,30,A103,Mie-10:00-12:00;4_10:00-12:00,,40
+1704254,Calidad de Software,3,8,1704151,1704254-LA,1,Ing. Medina,15,A104,5_14:00-16:00,1704254-TA,40
+1704254,Calidad de Software,3,8,1704151,1704254-LB,1,Ing. Ruiz,15,A105,1_14:00-16:00,1704254-TA,40
+1704254,Calidad de Software,3,8,1704151,1704254-LC,1,Ing. Lopez,15,A106,2_14:00-16:00,1704254-TA,40
+
+1704256,Diseno y Arquitectura de Software,4,8,1704149,1704256-TA,0,Ing. Castro,30,A201,1_14:00-16:00;2_14:00-16:00,,40
+1704256,Diseno y Arquitectura de Software,4,8,1704149,1704256-TB,0,Ing. Medina,30,A202,2_14:00-16:00;Mie-14:00-16:00,,40
+1704256,Diseno y Arquitectura de Software,4,8,1704149,1704256-TC,0,Ing. Ruiz,30,A203,Mie-14:00-16:00;4_14:00-16:00,,40
+1704256,Diseno y Arquitectura de Software,4,8,1704149,1704256-LA,1,Ing. Lopez,15,A204,5_14:00-16:00,1704256-TA,40
+1704256,Diseno y Arquitectura de Software,4,8,1704149,1704256-LB,1,Ing. Castro,15,A205,1_14:00-16:00,1704256-TA,40
+1704256,Diseno y Arquitectura de Software,4,8,1704149,1704256-LC,1,Ing. Medina,15,A206,2_14:00-16:00,1704256-TA,40

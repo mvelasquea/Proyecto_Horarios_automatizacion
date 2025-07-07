@@ -5,20 +5,18 @@ using namespace std;
 
 class Hora {
 private:
-    int dia;             // 0 = Lunes ... 5 = Sábado
-    int horaInicio;      // En minutos desde 00:00
+    int dia;             // 1 = Lunes ... 5 = Viernes
+    int horaInicio;      // minutos desde 00:00
     int horaFin;
-    string aula;
     string tipo;         // "TEO" o "LAB"
 
 public:
-    Hora(int d, int hi, int hf, string a, string t)
-        : dia(d), horaInicio(hi), horaFin(hf), aula(a), tipo(t) {}
+    Hora(int d, int hi, int hf, string t)
+        : dia(d), horaInicio(hi), horaFin(hf), tipo(t) {}
 
     int getDia() const { return dia; }
     int getInicio() const { return horaInicio; }
     int getFin() const { return horaFin; }
-    string getAula() const { return aula; }
     string getTipo() const { return tipo; }
 
     bool seCruzaCon(const Hora& otro) const {
