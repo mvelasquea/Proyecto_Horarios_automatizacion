@@ -1,28 +1,36 @@
 #pragma once
-#include <string>
+#include <vector>
+#include "Grupo.hpp"
 
 using namespace std;
 
 class Horario {
 private:
-    int dia;             // 0 = Lunes ... 5 = Sábado
-    int horaInicio;      // En minutos desde 00:00
-    int horaFin;
-    string aula;
-    string tipo;         // "TEO" o "LAB"
+    vector<Grupo*> gruposSeleccionados; // Un grupo por curso
+    int horasHueco;                     // Total de horas vacías entre clases
+    int diasLibres;                    // Número de días sin clases
+    int maxCreditosPorDia;             // Máximo crédito en un solo día
+    int costoTotal;                    // Valor para evaluar preferencia general
 
 public:
-    Horario(int d, int hi, int hf, string a, string t)
-        : dia(d), horaInicio(hi), horaFin(hf), aula(a), tipo(t) {}
+    Horario() : horasHueco(0), diasLibres(0), maxCreditosPorDia(0), costoTotal(0) {}
 
-    int getDia() const { return dia; }
-    int getInicio() const { return horaInicio; }
-    int getFin() const { return horaFin; }
-    string getAula() const { return aula; }
-    string getTipo() const { return tipo; }
-
-    bool seCruzaCon(const Horario& otro) const {
-        return dia == otro.dia &&
-               !(horaFin <= otro.horaInicio || horaInicio >= otro.horaFin);
+    void agregarGrupo(Grupo* grupo) {
+        gruposSeleccionados.push_back(grupo);
     }
+
+    const vector<Grupo*>& getGrupos() const {
+        return gruposSeleccionados;
+    }
+
+    // Métodos para calcular métricas
+    void calcularHorasHueco();
+    void calcularDiasLibres();
+    void calcularMaxCreditosPorDia();
+    void calcularCostoTotal();
+
+    int getHorasHueco() const { return horasHueco; }
+    int getDiasLibres() const { return diasLibres; }
+    int getMaxCreditosPorDia() const { return maxCreditosPorDia; }
+    int getCostoTotal() const { return costoTotal; }
 };

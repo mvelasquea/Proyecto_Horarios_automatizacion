@@ -1,14 +1,14 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "Horario.hpp"
+#include "Hora.hpp"
 
 using namespace std;
 
 class Grupo {
 private:
     string idGrupo;
-    vector<Horario> horarios;
+    vector<Hora> horas;
     string docente;
     int vacantes;
     bool disponible;
@@ -25,9 +25,9 @@ public:
     bool estaDisponible() const { return disponible; }
     bool esLab() const { return esLaboratorio; }
     string getGrupoVinculado() const { return vinculadoA; }
-    const vector<Horario>& getHorarios() const { return horarios; }
+    const vector<Hora>& getHoras() const { return horas; }
 
-    void agregarHorario(const Horario& h) {
-        horarios.push_back(h);
+    void agregarHora(const Hora& h) {
+        horas.push_back(h);
     }
 };
