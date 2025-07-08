@@ -2,7 +2,6 @@
 #define GRAFO_IMPL_HPP
 
 #include <sstream>
-#include "../Grupo.hpp"  // Asegúrate que la ruta sea correcta según tu proyecto
 
 // ------- Helpers to_id --------
 // Template general (para punteros genéricos)
@@ -25,15 +24,7 @@ inline std::string to_id<std::string>(std::string obj) {
     return obj;
 }
 
-// Especialización para Grupo* (usa el id de grupo como identificador único)
-template <>
-inline std::string to_id<Grupo*>(Grupo* obj) {
-    if (!obj) return "nullptr";
-    return obj->getIdGrupo();
-}
-// --------------------------------
-
-// ---- Implementación de métodos Arista ----
+// -- Implementación de métodos Arista --
 
 template <typename T>
 Arista<T>::Arista(T origen, T destino, bool dirigido, double peso) noexcept
@@ -86,11 +77,10 @@ bool Arista<T>::operator<(const Arista<T>& a) const {
     return toString() < a.toString();
 }
 
-// ---- Implementación Grafo ----
+// -- Implementación Grafo --
 
 template <typename T>
-Grafo<T>::Grafo(bool dirigido) noexcept
-    : dirigido_(dirigido) {}
+Grafo<T>::Grafo(bool dirigido) noexcept : dirigido_(dirigido) {}
 
 template <typename T>
 string Grafo<T>::hashArista(const Arista<T>& a) const {
@@ -170,6 +160,21 @@ vector<T> Grafo<T>::obtenerVecinos(const T& v) const {
         }
     }
     return vecinos;
+}
+
+template <typename T>
+const vector<T>& Grafo<T>::obtenerVertices() const {
+    return vertices_;
+}
+
+template <typename T>
+vector<Arista<T>> Grafo<T>::obtenerAristasDe(const T& v) const {
+    vector<Arista<T>> aristasSalida;
+    for (const auto& [k, arista] : aristas_) {
+        if (arista.esInicial(v))
+            aristasSalida.push_back(arista);
+    }
+    return aristasSalida;
 }
 
 template <typename T>

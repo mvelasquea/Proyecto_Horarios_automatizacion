@@ -7,6 +7,7 @@
 #include <map>
 #include <algorithm>
 #include <stdexcept>
+#include <functional>
 
 using namespace std;
 
@@ -62,6 +63,12 @@ public:
     int gradoTotal() const;
 
     vector<T> obtenerVecinos(const T& v) const;
+
+    // Devuelve todos los vértices
+    const vector<T>& obtenerVertices() const;
+
+    // Devuelve aristas salientes desde un vértice
+    vector<Arista<T>> obtenerAristasDe(const T& v) const;
 
     void dfsAux(const T& v, map<T, bool>& visitados) const;
     int contarComponentesConexas() const;

@@ -112,8 +112,9 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: \
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Curso.hpp \
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Grupo.hpp \
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Hora.hpp \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream \
+ C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo.hpp \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ostream \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ios \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/exception \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/exception_ptr.h \
@@ -154,13 +155,33 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets.tcc \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/basic_ios.tcc \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ostream \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/ostream.tcc \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/istream.tcc \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/map \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_tree.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_map.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_multimap.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/algorithm \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algo.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/algorithmfwd.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_heap.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_tempbuf.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uniform_int_dist.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/glue_algorithm_defs.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/execution_defs.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/functional \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_function.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/array \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare \
+ C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo_impl.hpp \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/sstream \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/codecvt.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/fstream.tcc \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/sstream \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/set \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_set.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_multiset.h

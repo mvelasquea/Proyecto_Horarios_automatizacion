@@ -8,7 +8,9 @@ int main() {
         sistema.cargarCursos("../data/ESPIS-cursos-2017.csv");
         //sistema.imprimirCursos();
         sistema.cargarGrupos("../data/h1.csv");
-        sistema.imprimirGrupos();
+        //sistema.imprimirGrupos();
+        sistema.cargarGrafo();
+        sistema.imprimirGrafo();
         std::cout << "Datos cargados correctamente.\n";
     } catch (const std::exception& e) {
         std::cerr << "Excepción capturada: " << e.what() << std::endl;

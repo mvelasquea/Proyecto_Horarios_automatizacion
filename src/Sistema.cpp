@@ -2,9 +2,86 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <set>
 
 // Constructor
 Sistema::Sistema() {}
+
+void Sistema::cargarGrafo() {
+    // Reiniciar grafo (no dirigido)
+    grafoGrupos = Grafo<Grupo*>(false);
+
+    // Recorrer todos los cursos cargados
+    for (auto& [codigo, curso] : cursos) {
+        const auto& grupos = curso.getGrupos();
+
+        // Insertar cada grupo en el grafo
+        for (const Grupo& grupo : grupos) {
+            Grupo* ptrGrupo = const_cast<Grupo*>(&grupo);
+
+            grafoGrupos.insertarVertice(ptrGrupo);
+
+            // Verificar compatibilidad con los grupos ya insertados
+            for (Grupo* nodoExistente : grafoGrupos.obtenerVertices()) {
+                if (nodoExistente == ptrGrupo) continue;
+
+                if (sonCompatibles(nodoExistente, ptrGrupo)) {
+                    grafoGrupos.insertarArista(Arista<Grupo*>(nodoExistente, ptrGrupo, false));
+                }
+            }
+        }
+    }
+}
+
+void Sistema::imprimirGrafo() const {
+    std::cout << "=== Grafo de Grupos y sus vecinos compatibles ===\n";
+    for (auto v : grafoGrupos.obtenerVertices()) {
+        std::cout << "Grupo: " << v->getIdGrupo()
+                  << " | Curso: " << v->getCurso()->getCodigo() << "\nVecinos: ";
+
+        std::set<std::string> vecinosUnicos;
+        for (auto vecino : grafoGrupos.obtenerVecinos(v)) {
+            std::string idUnico = vecino->getCurso()->getCodigo() + ":" + vecino->getIdGrupo();
+            vecinosUnicos.insert(idUnico);
+        }
+
+        for (const auto& vecinoId : vecinosUnicos) {
+            std::cout << vecinoId << " ";
+        }
+        std::cout << "\n\n";
+    }
+}
+
+void Sistema::imprimirDFS(Grupo* v, std::map<Grupo*, bool>& visitados) const {
+    visitados[v] = true;
+    std::cout << "Grupo: " << v->getIdGrupo()
+              << " | Curso: " << v->getCurso()->getCodigo() << "\nVecinos: ";
+
+    for (auto vecino : grafoGrupos.obtenerVecinos(v)) {
+        std::cout << vecino->getIdGrupo() << " ";
+    }
+    std::cout << "\n\n";
+
+    for (auto vecino : grafoGrupos.obtenerVecinos(v)) {
+        if (!visitados[vecino]) {
+            imprimirDFS(vecino, visitados);
+        }
+    }
+}
+
+void Sistema::imprimirGrafoDFS() const {
+    std::map<Grupo*, bool> visitados;
+    for (auto v : grafoGrupos.obtenerVertices()) {
+        visitados[v] = false;
+    }
+
+    std::cout << "=== Recorrido DFS Completo del Grafo ===\n";
+    for (auto v : grafoGrupos.obtenerVertices()) {
+        if (!visitados[v]) {
+            imprimirDFS(v, visitados);
+        }
+    }
+}
 
 void Sistema::imprimirCursos() const {
     std::cout << "\n===== Cursos Cargados =====\n";
@@ -203,32 +280,24 @@ std::string Sistema::limpiarCampo(const std::string& campo) {
     return res;
 }
 
-
-bool sonCompatibles(const Grupo& g1, const Grupo& g2) {
-    // Restricción 1: No seleccionar más de un grupo del mismo curso,
-    // excepto si uno es laboratorio y el otro teoría.
-    if (g1.getCurso()->getCodigo() == g2.getCurso()->getCodigo()) {
-        if (g1.esLab() != g2.esLab()) {
-            return true;  // compatible: teoría + laboratorio del mismo curso
-        } else {
-            return false; // dos grupos del mismo tipo y mismo curso no son compatibles
-        }
+bool Sistema::sonCompatibles(const Grupo* g1, const Grupo* g2) const {
+    // Restricción 1: No más de un grupo del mismo curso, salvo teoría + laboratorio
+    if (g1->getCurso()->getCodigo() == g2->getCurso()->getCodigo()) {
+        return g1->esLab() != g2->esLab();
     }
 
-    // Restricción 2: Evitar choque de horarios salvo teoría-laboratorio.
-    for (const Hora& h1 : g1.getHoras()) {
-        for (const Hora& h2 : g2.getHoras()) {
+    // Restricción 2: Evitar choque horario salvo teoría-laboratorio
+    for (const Hora& h1 : g1->getHoras()) {
+        for (const Hora& h2 : g2->getHoras()) {
             if (h1.seCruzaCon(h2)) {
-                // Si son diferentes tipos (teoría-laboratorio), se permite cruzar
-                if (g1.esLab() != g2.esLab()) {
-                    continue; // seguir verificando otras horas
-                } else {
-                    return false; // choque horario no permitido entre mismos tipos
+                // Si ambos son del mismo tipo, no son compatibles
+                if (g1->esLab() == g2->esLab()) {
+                    return false;
                 }
+                // Si son diferente tipo (teoría-lab), se permite cruzar, sigue verificando
             }
         }
     }
-
-    // Si pasó todas las pruebas, son compatibles
+    // No hay choques o choques permitidos, son compatibles
     return true;
 }

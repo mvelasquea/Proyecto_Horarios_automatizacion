@@ -161,8 +161,15 @@ CMakeFiles/psgraph_tests.dir/tests/test_grafo.cpp.obj: \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uniform_int_dist.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/glue_algorithm_defs.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/execution_defs.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/functional \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_function.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_map \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable_policy.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/enable_special_members.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_map.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/array \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare \
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo_impl.hpp \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/sstream \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc \
- C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Grupo.hpp \
- C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Hora.hpp
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc

@@ -3,13 +3,12 @@
 
 CMakeFiles/psgraph_tests.dir/tests/test_grafo.cpp.obj
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/tests/test_grafo.cpp
- C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Grupo.hpp
- C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Hora.hpp
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo.hpp
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo_impl.hpp
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/limits.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/syslimits.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/algorithm
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/array
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward/binders.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/algorithmfwd.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/alloc_traits.h
@@ -24,6 +23,7 @@ CMakeFiles/psgraph_tests.dir/tests/test_grafo.cpp.obj
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/cpp_type_traits.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/cxxabi_forced.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/cxxabi_init_exception.h
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/enable_special_members.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/erase_if.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/exception.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/exception_defines.h
@@ -31,6 +31,8 @@ CMakeFiles/psgraph_tests.dir/tests/test_grafo.cpp.obj
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/functexcept.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/functional_hash.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hash_bytes.h
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable.h
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable_policy.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/invoke.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/ios_base.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/istream.tcc
@@ -53,6 +55,7 @@ CMakeFiles/psgraph_tests.dir/tests/test_grafo.cpp.obj
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/refwrap.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_abs.h
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_function.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algo.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algobase.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_bvector.h
@@ -74,12 +77,14 @@ CMakeFiles/psgraph_tests.dir/tests/test_grafo.cpp.obj
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/string_view.tcc
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stringfwd.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uniform_int_dist.h
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_map.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uses_allocator.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/utility.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/vector.tcc
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cctype
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cerrno
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/clocale
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdint
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdio
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdlib
@@ -94,6 +99,7 @@ CMakeFiles/psgraph_tests.dir/tests/test_grafo.cpp.obj
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ext/numeric_traits.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ext/string_conversions.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ext/type_traits.h
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/functional
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/initializer_list
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ios
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iosfwd
@@ -115,6 +121,7 @@ CMakeFiles/psgraph_tests.dir/tests/test_grafo.cpp.obj
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tuple
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/type_traits
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/typeinfo
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_map
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/vector
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h
