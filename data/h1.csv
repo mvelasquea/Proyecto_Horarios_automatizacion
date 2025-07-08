@@ -1,7 +1,45 @@
-curso,grupo_id,tipo,aula,horas,cupo_docente,docente,cupos
-1703133,1,F,B201,"1_08:00-09:40 3_08:00-09:40",30,María López,25
-1703134,2,F,C105,"2_10:00-11:40 4_10:00-11:40",25,Carlos Pérez,20
-1703135,1,F,D303,"1_14:00-15:40 3_14:00-15:40",20,Ana Martínez,18
-1703136,1,F,A101,"2_12:00-13:40 4_12:00-13:40",35,José García,30
-1703137,1,F,B102,"1_16:00-17:40 3_16:00-17:40",28,Lucía Fernández,26
-1703138,1,F,C204,"2_14:00-15:40 4_14:00-15:40",22,Pedro Martínez,20
+curso,grupo_id,tipo,aula,horas,docente,cupos
+# Curso 1703133 - Base de Datos (teóricos)
+1703133,1,F,B201,"1_08:00-09:40 3_08:00-09:40",María López,25
+1703133,2,F,B202,"2_10:00-11:40 4_10:00-11:40",Carlos Sánchez,28
+1703133,3,F,B203,"1_14:00-15:40 3_14:00-15:40",Ana Gómez,27
+# Laboratorios 1703133
+1703133,101,L,Lab1,"2_16:00-17:40",Juan Pérez,18
+1703133,102,L,Lab2,"4_16:00-17:40",Marta Ruiz,20
+1703133,103,L,Lab3,"3_18:00-19:40",Luis Fernández,15
+1703133,104,L,Lab4,"1_18:00-19:40",Sofía Díaz,17
+
+# Curso 1703134 - Programacion de Sistemas (teóricos)
+1703134,1,F,C105,"2_10:00-11:40 4_10:00-11:40",Carlos Pérez,20
+1703134,2,F,C106,"1_08:00-09:40 3_08:00-09:40",Laura Méndez,22
+1703134,3,F,C107,"2_14:00-15:40 4_14:00-15:40",Diego Castillo,21
+# Laboratorios 1703134
+1703134,101,L,Lab5,"1_16:00-17:40",Andrés López,19
+1703134,102,L,Lab6,"3_16:00-17:40",Carla Vega,20
+1703134,103,L,Lab7,"2_18:00-19:40",Mario Jiménez,16
+1703134,104,L,Lab8,"4_18:00-19:40",Verónica Ruiz,18
+
+# Curso 1703135 - Ingenieria y Procesos de Software (solo teóricos)
+1703135,1,F,D303,"1_14:00-15:40 3_14:00-15:40",Ana Martínez,18
+1703135,2,F,D304,"2_08:00-09:40 4_08:00-09:40",Ricardo Torres,19
+1703135,3,F,D305,"1_10:00-11:40 3_10:00-11:40",Elena Morales,20
+
+# Curso 1703136 - Teoria de la Computacion (solo teóricos)
+1703136,1,F,A101,"2_12:00-13:40 4_12:00-13:40",José García,30
+1703136,2,F,A102,"1_08:00-09:40 3_08:00-09:40",Mariana Castillo,28
+1703136,3,F,A103,"2_14:00-15:40 4_14:00-15:40",Carlos Navarro,25
+
+# Curso 1703137 - Organizacion y Metodos (solo teóricos)
+1703137,1,F,B102,"1_16:00-17:40 3_16:00-17:40",Lucía Fernández,26
+1703137,2,F,B103,"2_10:00-11:40 4_10:00-11:40",Jorge Herrera,27
+1703137,3,F,B104,"1_08:00-09:40 3_08:00-09:40",Patricia León,25
+
+# Curso 1703138 - Investigacion de Operaciones (teóricos)
+1703138,1,F,C204,"2_14:00-15:40 4_14:00-15:40",Pedro Martínez,20
+1703138,2,F,C205,"1_16:00-17:40 3_16:00-17:40",Raúl García,21
+1703138,3,F,C206,"2_08:00-09:40 4_08:00-09:40",Silvia Torres,22
+# Laboratorios 1703138
+1703138,101,L,Lab9,"1_18:00-19:40",Claudia Ruiz,15
+1703138,102,L,Lab10,"3_18:00-19:40",Fernando López,17
+1703138,103,L,Lab11,"2_16:00-17:40",Ana Morales,16
+1703138,104,L,Lab12,"4_16:00-17:40",Diego Fernández,15
