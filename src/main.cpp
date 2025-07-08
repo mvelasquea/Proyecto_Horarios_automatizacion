@@ -6,7 +6,9 @@ int main() {
     try {
         Sistema sistema;
         sistema.cargarCursos("../data/ESPIS-cursos-2017.csv");
-        sistema.imprimirCursos();
+        //sistema.imprimirCursos();
+        sistema.cargarGrupos("../data/h1.csv");
+        sistema.imprimirGrupos();
         std::cout << "Datos cargados correctamente.\n";
     } catch (const std::exception& e) {
         std::cerr << "Excepción capturada: " << e.what() << std::endl;

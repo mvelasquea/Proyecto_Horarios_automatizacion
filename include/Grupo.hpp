@@ -2,7 +2,8 @@
 #include <string>
 #include <vector>
 #include "Hora.hpp"
-#include "Curso.hpp"
+
+class Curso; 
 
 using namespace std;
 
