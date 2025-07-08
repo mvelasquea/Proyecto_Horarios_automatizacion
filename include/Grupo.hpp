@@ -8,7 +8,7 @@ using namespace std;
 class Grupo {
 private:
     string idGrupo;
-    bool tipo;        // false = teórico, true = laboratorio
+    bool esLaboratorio;         // false = TEO, true = LAB
     vector<Hora> horas;
     string docente;
     int vacantes;
@@ -16,12 +16,12 @@ private:
     int cupoDocente;
 
 public:
-    Grupo(string id, bool t, const string& doc, int vac, const string& aula_, int cupo)
-        : idGrupo(id), tipo(t), docente(doc), vacantes(vac), aula(aula_), cupoDocente(cupo) {}
+    Grupo(string id, bool esLab, const string& doc, int vac, const string& aula_, int cupo)
+        : idGrupo(id), esLaboratorio(esLab), docente(doc), vacantes(vac), aula(aula_), cupoDocente(cupo) {}
 
     string getIdGrupo() const { return idGrupo; }
-    bool getTipo() const { return tipo; }
-    bool esLab() const { return tipo; }
+    bool getTipo() const { return esLaboratorio; }
+    bool esLab() const { return esLaboratorio; }
     string getDocente() const { return docente; }
     int getVacantes() const { return vacantes; }
     string getAula() const { return aula; }

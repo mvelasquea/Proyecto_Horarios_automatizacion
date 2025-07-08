@@ -2,20 +2,11 @@
 #include <iostream>
 #include <exception>
 
-int main(int argc, char* argv[]) {
+int main() {
     try {
-        if (argc != 2) {
-            std::cerr << "Uso: " << argv[0] << " <ruta a CSV de grupos>\n";
-            return 1;
-        }
-
         Sistema sistema;
-        if (!sistema.cargarDatos(argv[1])) {
-            std::cerr << "No se pudieron cargar los datos.\n";
-            return 1;
-        }
-        sistema.imprimirDatos();
-
+        sistema.cargarCursos("../data/ESPIS-cursos-2017.csv");
+        sistema.imprimirCursos();
         std::cout << "Datos cargados correctamente.\n";
     } catch (const std::exception& e) {
         std::cerr << "Excepción capturada: " << e.what() << std::endl;
