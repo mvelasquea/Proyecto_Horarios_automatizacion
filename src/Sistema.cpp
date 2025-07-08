@@ -1,4 +1,5 @@
 #include "Sistema.hpp"
+#include <unordered_set>
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -89,11 +90,16 @@ void Sistema::imprimirCursos() const {
         std::cout << "Curso [" << codigo << "]: " << curso.getNombre()
                   << " | Tipo: " << curso.getTipo()
                   << " | Créditos: " << curso.getCreditos()
-                  << " | Ciclo: " << curso.getCiclo();
+                  << " | Ciclo: " << curso.getCiclo()
+                  << " | Horas Teóricas: " << curso.getHorasTeoricas()
+                  << " | Horas Prácticas: " << curso.getHorasPracticas()
+                  << " | Horas Laboratorio: " << curso.getHorasLaboratorio();
+        
         if (!curso.getPrerequisito1().empty())
             std::cout << " | PRQ1: " << curso.getPrerequisito1();
         if (!curso.getPrerequisito2().empty())
             std::cout << " | PRQ2: " << curso.getPrerequisito2();
+        
         std::cout << std::endl;
     }
     std::cout << "===== Fin de impresión =====\n";
@@ -120,14 +126,19 @@ void Sistema::cargarCursos(const std::string& rutaCSV) {
             std::stringstream ss(linea);
             std::vector<std::string> campos;
             std::string campo;
-            while (std::getline(ss, campo, ',')) campos.push_back(campo);
+            
+            // Leer todos los campos de la línea
+            while (std::getline(ss, campo, ',')) {
+                campos.push_back(campo);
+            }
 
-            // Se espera al menos 9 campos por línea
-            if (campos.size() < 9) {
+            // Verificar que tenga al menos 10 campos (los 7 básicos + 3 de horas)
+            if (campos.size() < 10) {
                 std::cerr << "Línea incompleta: " << linea << std::endl;
                 continue;
             }
 
+            // Parsear datos básicos
             std::string codigo = campos[0];
             std::string tipo = campos[1];
             std::string nombre = campos[2];
@@ -135,9 +146,16 @@ void Sistema::cargarCursos(const std::string& rutaCSV) {
             int ciclo = campos[4].empty() ? 0 : std::stoi(campos[4]);
             std::string prq1 = campos[5];
             std::string prq2 = campos[6];
+            
+            // Parsear horas (campos 7, 8, 9)
+            int horasTeo = campos[7].empty() ? 0 : std::stoi(campos[7]);
+            int horasPrac = campos[8].empty() ? 0 : std::stoi(campos[8]);
+            int horasLab = campos[9].empty() ? 0 : std::stoi(campos[9]);
 
-            // Crear y agregar el curso
-            Curso curso(codigo, tipo, nombre, creditos, ciclo, prq1, prq2);
+            // Crear curso con todos los datos
+            Curso curso(codigo, tipo, nombre, creditos, ciclo, prq1, prq2, 
+                      horasTeo, horasPrac, horasLab);
+            
             cursos.emplace(codigo, std::move(curso));
         }
         catch (const std::exception& e) {
@@ -281,23 +299,208 @@ std::string Sistema::limpiarCampo(const std::string& campo) {
 }
 
 bool Sistema::sonCompatibles(const Grupo* g1, const Grupo* g2) const {
-    // Restricción 1: No más de un grupo del mismo curso, salvo teoría + laboratorio
-    if (g1->getCurso()->getCodigo() == g2->getCurso()->getCodigo()) {
+    // Mismo curso: solo permitir teoría + lab
+    if (g1->getCurso() == g2->getCurso()) {
         return g1->esLab() != g2->esLab();
     }
 
-    // Restricción 2: Evitar choque horario salvo teoría-laboratorio
+    // Verificar choque de horarios
     for (const Hora& h1 : g1->getHoras()) {
         for (const Hora& h2 : g2->getHoras()) {
             if (h1.seCruzaCon(h2)) {
-                // Si ambos son del mismo tipo, no son compatibles
-                if (g1->esLab() == g2->esLab()) {
-                    return false;
-                }
-                // Si son diferente tipo (teoría-lab), se permite cruzar, sigue verificando
+                return false;
             }
         }
     }
-    // No hay choques o choques permitidos, son compatibles
     return true;
+}
+
+void Sistema::generarHorarios(bool incluirLaboratorios) {
+    horarios.clear();
+    incluirLabs = incluirLaboratorios;
+    
+    // Preparar todos los grupos (teóricos primero, luego laboratorios)
+    prepararGruposParaBacktracking();
+    
+    // Estado inicial
+    vector<Grupo*> seleccionados;
+    unordered_map<string, bool> cursoConTeorico; // Indica si ya tiene grupo teórico
+    unordered_map<string, bool> cursoConLab;     // Indica si ya tiene laboratorio
+    
+    // Inicializar estados
+    for (const auto& [codigo, _] : cursos) {
+        cursoConTeorico[codigo] = false;
+        cursoConLab[codigo] = false;
+    }
+    
+    // Llamar al backtracking
+    backtrackingHorarios(seleccionados, 0, cursoConTeorico, cursoConLab);
+}
+
+void Sistema::backtrackingHorarios(vector<Grupo*>& seleccionados, size_t index,
+                                 unordered_map<string, bool>& cursoConTeorico,
+                                 unordered_map<string, bool>& cursoConLab) {
+    // Verificar si tenemos un horario completo
+    bool horarioCompleto = true;
+    for (const auto& [codigo, curso] : cursos) {
+        if (!cursoConTeorico[codigo]) {
+            horarioCompleto = false;
+            break;
+        }
+    }
+
+    if (horarioCompleto) {
+        horarios.emplace_back(seleccionados);
+        return;
+    }
+
+    if (index >= gruposParaBacktracking.size()) {
+        return;
+    }
+
+    Grupo* grupoActual = gruposParaBacktracking[index];
+    Curso* cursoActual = grupoActual->getCurso();
+    string codigoCurso = cursoActual->getCodigo();
+
+    // Opción 1: No tomar este grupo
+    backtrackingHorarios(seleccionados, index + 1, cursoConTeorico, cursoConLab);
+
+    // Opción 2: Tomar el grupo si es válido
+    bool puedeTomar = false;
+    if (grupoActual->esLab()) {
+        puedeTomar = cursoConTeorico[codigoCurso] && 
+                    !cursoConLab[codigoCurso] && 
+                    incluirLabs;
+    } else {
+        puedeTomar = !cursoConTeorico[codigoCurso];
+    }
+
+    if (puedeTomar) {
+        bool compatible = true;
+        for (Grupo* g : seleccionados) {
+            if (!sonCompatibles(g, grupoActual)) {
+                compatible = false;
+                break;
+            }
+        }
+
+        if (compatible) {
+            // Actualizar estado
+            if (grupoActual->esLab()) {
+                cursoConLab[codigoCurso] = true;
+            } else {
+                cursoConTeorico[codigoCurso] = true;
+            }
+            seleccionados.push_back(grupoActual);
+
+            // Llamada recursiva
+            backtrackingHorarios(seleccionados, index + 1, cursoConTeorico, cursoConLab);
+
+            // Backtrack
+            seleccionados.pop_back();
+            if (grupoActual->esLab()) {
+                cursoConLab[codigoCurso] = false;
+            } else {
+                cursoConTeorico[codigoCurso] = false;
+            }
+        }
+    }
+}
+
+void Sistema::prepararGruposParaBacktracking() {
+    gruposParaBacktracking.clear();
+    
+    // Primero agregamos todos los grupos teóricos
+    for (auto& [codigo, curso] : cursos) {
+        auto gruposTeoricos = curso.getGruposTeoricos();
+        gruposParaBacktracking.insert(gruposParaBacktracking.end(), 
+                                    gruposTeoricos.begin(), 
+                                    gruposTeoricos.end());
+    }
+    
+    // Luego agregamos los laboratorios si están habilitados
+    if (incluirLabs) {
+        for (auto& [codigo, curso] : cursos) {
+            if (curso.requiereLaboratorio()) {
+                auto gruposLab = curso.getGruposLaboratorio();
+                gruposParaBacktracking.insert(gruposParaBacktracking.end(), 
+                                            gruposLab.begin(), 
+                                            gruposLab.end());
+            }
+        }
+    }
+}
+
+void Sistema::verHorarios() const {
+    if (horarios.empty()) {
+        std::cout << "No hay horarios generados.\n";
+        return;
+    }
+
+    std::cout << "=== Horarios Generados (" << horarios.size() << ") ===\n";
+    std::cout << "Configuración: Laboratorios " << (incluirLabs ? "INCLUIDOS" : "excluidos") << "\n\n";
+    
+    int contador = 1;
+    for (const auto& horario : horarios) {
+        std::cout << "HORARIO #" << contador++ << ":\n";
+        
+        // Separar grupos por tipo
+        std::vector<const Grupo*> teorias;
+        std::vector<const Grupo*> labs;
+
+        for (const auto& grupo : horario.getGrupos()) {
+            if (grupo->esLab()) {
+                labs.push_back(grupo);
+            } else {
+                teorias.push_back(grupo);
+            }
+        }
+
+        // Mostrar teoría
+        std::cout << "  [TEORÍA]\n";
+        for (const auto& grupo : teorias) {
+            std::cout << "  • " << grupo->getCurso()->getCodigo() 
+                      << " - Grupo " << grupo->getIdGrupo()
+                      << " (" << grupo->getDocente() << ")\n";
+            
+            for (const auto& hora : grupo->getHoras()) {
+                std::cout << "    ↳ " << hora.toString() 
+                          << " en " << hora.getAula() << "\n";
+            }
+        }
+
+        // Mostrar laboratorios si existen
+        if (!labs.empty()) {
+            std::cout << "\n  [LABORATORIOS]\n";
+            for (const auto& grupo : labs) {
+                std::cout << "  • " << grupo->getCurso()->getCodigo() 
+                          << " - Lab " << grupo->getIdGrupo()
+                          << " (" << grupo->getDocente() << ")\n";
+                
+                for (const auto& hora : grupo->getHoras()) {
+                    std::cout << "    ↳ " << hora.toString() 
+                              << " en " << hora.getAula() << "\n";
+                }
+            }
+        }
+
+        std::cout << "--------------------------\n\n";
+    }
+}
+
+void Sistema::verificarDatosCargados() const {
+    cout << "\n=== VERIFICACIÓN DE DATOS ===\n";
+    cout << "Cursos cargados: " << cursos.size() << endl;
+    
+    int totalGrupos = 0;
+    int cursosConLab = 0;
+    
+    for (const auto& [codigo, curso] : cursos) {
+        totalGrupos += curso.getGrupos().size();
+        if (curso.tieneLaboratorio()) cursosConLab++;
+    }
+    
+    cout << "Total grupos cargados: " << totalGrupos << endl;
+    cout << "Cursos con laboratorio: " << cursosConLab << endl;
+    cout << "Grupos en grafo: " << grafoGrupos.obtenerVertices().size() << endl;
 }

@@ -5,6 +5,7 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: C:/Users/sarv/UNSA/semestre_05/
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Curso.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Grupo.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Hora.hpp \
+  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Horario.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo_impl.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Sistema.hpp \
@@ -43,8 +44,11 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: C:/Users/sarv/UNSA/semestre_05/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/istream.tcc \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_classes.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_classes.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_conv.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/localefwd.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/memoryfwd.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/move.h \
@@ -56,6 +60,7 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: C:/Users/sarv/UNSA/semestre_05/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/postypes.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/predefined_ops.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/ptr_traits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/quoted_string.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/range_access.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/refwrap.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc \
@@ -85,6 +90,7 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: C:/Users/sarv/UNSA/semestre_05/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stringfwd.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uniform_int_dist.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_map.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_set.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uses_allocator.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/utility.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/vector.tcc \
@@ -95,6 +101,7 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: C:/Users/sarv/UNSA/semestre_05/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdint \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdio \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdlib \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ctime \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cwchar \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cwctype \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/debug/assertions.h \
@@ -109,10 +116,12 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: C:/Users/sarv/UNSA/semestre_05/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/functional \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/initializer_list \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iomanip \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ios \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iosfwd \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/locale \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/map \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/new \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ostream \
@@ -131,6 +140,7 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: C:/Users/sarv/UNSA/semestre_05/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/type_traits \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/typeinfo \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_map \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_set \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/vector \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
@@ -144,7 +154,9 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: C:/Users/sarv/UNSA/semestre_05/
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/mm_malloc.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stdint.h \
@@ -192,6 +204,7 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: C:/Users/sarv/UNSA/semestre_05/2-P
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Curso.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Grupo.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Hora.hpp \
+  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Horario.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo_impl.hpp \
   C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Sistema.hpp \
@@ -209,6 +222,7 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: C:/Users/sarv/UNSA/semestre_05/2-P
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/basic_string.tcc \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/char_traits.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/charconv.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/codecvt.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/concept_check.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/cpp_type_traits.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/cxxabi_forced.h \
@@ -228,8 +242,11 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: C:/Users/sarv/UNSA/semestre_05/2-P
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/istream.tcc \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_classes.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_classes.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_conv.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets.tcc \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/localefwd.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/memoryfwd.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/move.h \
@@ -241,6 +258,7 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: C:/Users/sarv/UNSA/semestre_05/2-P
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/postypes.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/predefined_ops.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/ptr_traits.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/quoted_string.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/range_access.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/refwrap.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc \
@@ -278,6 +296,7 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: C:/Users/sarv/UNSA/semestre_05/2-P
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdint \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdio \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdlib \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ctime \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cwchar \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cwctype \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/debug/assertions.h \
@@ -291,10 +310,12 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: C:/Users/sarv/UNSA/semestre_05/2-P
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ext/type_traits.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/functional \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/initializer_list \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iomanip \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ios \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iosfwd \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/locale \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/map \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/new \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ostream \
@@ -323,7 +344,9 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: C:/Users/sarv/UNSA/semestre_05/2-P
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/mm_malloc.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stdint.h \
@@ -368,15 +391,13 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: C:/Users/sarv/UNSA/semestre_05/2-P
   C:/mingw64/x86_64-w64-mingw32/include/wctype.h
 
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/basic_ios.tcc:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/limits.h:
-
 C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/src/Sistema.cpp:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/cpp_type_traits.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/exception.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets_nonio.tcc:
 
 C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl:
 
@@ -388,15 +409,23 @@ C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Curs
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets.tcc:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/quoted_string.h:
+
 C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Grupo.hpp:
 
 C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Hora.hpp:
+
+C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Horario.hpp:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ostream:
 
 C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo.hpp:
 
 C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo_impl.hpp:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/basic_ios.tcc:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/limits.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/localefwd.h:
 
@@ -450,6 +479,8 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable_policy.h
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/concept_check.h:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets_nonio.h:
+
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/cxxabi_forced.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/functional_hash.h:
@@ -476,13 +507,13 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/new_allocator.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hash_bytes.h:
 
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_bvector.h:
-
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/ios_base.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/istream.tcc:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_classes.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_conv.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/ostream_insert.h:
 
@@ -491,10 +522,6 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets.h:
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/memoryfwd.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/move.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/stdlib.h:
-
-C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algo.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/nested_exception.h:
 
@@ -512,7 +539,13 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_function.h:
 
+C:/mingw64/x86_64-w64-mingw32/include/stdlib.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algo.h:
+
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algobase.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_bvector.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_construct.h:
 
@@ -529,6 +562,8 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_iterator_base_
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ext/alloc_traits.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_map.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_set.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_multimap.h:
 
@@ -578,6 +613,8 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdint:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdlib:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ctime:
+
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cwchar:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cwctype:
@@ -610,6 +647,8 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/functional:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/initializer_list:
 
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iomanip:
+
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ios:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iosfwd:
@@ -617,6 +656,8 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iosfwd:
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/locale:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/map:
 
@@ -646,11 +687,17 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/type_traits:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/typeinfo:
 
+C:/mingw64/x86_64-w64-mingw32/include/sys/types.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_set:
+
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/vector:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:
 
@@ -673,6 +720,8 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h:
+
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/mm_malloc.h:
 
@@ -729,8 +778,6 @@ C:/mingw64/x86_64-w64-mingw32/include/stddef.h:
 C:/mingw64/x86_64-w64-mingw32/include/stdio.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h:
-
-C:/mingw64/x86_64-w64-mingw32/include/sys/types.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/time.h:
 

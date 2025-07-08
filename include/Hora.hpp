@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <sstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -22,5 +24,18 @@ public:
     bool seCruzaCon(const Hora& otro) const {
         return dia == otro.dia &&
                !(horaFin <= otro.horaInicio || horaInicio >= otro.horaFin);
+    }
+
+    string toString() const {
+        auto minutosAString = [](int minutos) -> string {
+            int h = minutos / 60;
+            int m = minutos % 60;
+            std::ostringstream oss;
+            oss << std::setw(2) << std::setfill('0') << h << ":"
+                << std::setw(2) << std::setfill('0') << m;
+            return oss.str();
+        };
+
+        return std::to_string(dia) + "_" + minutosAString(horaInicio) + "-" + minutosAString(horaFin);
     }
 };
