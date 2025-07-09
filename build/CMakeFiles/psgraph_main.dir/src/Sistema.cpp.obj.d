@@ -188,12 +188,12 @@ CMakeFiles/psgraph_main.dir/src/Sistema.cpp.obj: \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare \
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo_impl.hpp \
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Horario.hpp \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/set \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_set.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_multiset.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_set \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_set.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/fstream.tcc
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/fstream.tcc \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/set \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_set.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_multiset.h

@@ -1,0 +1,48 @@
+# Makefile para aplicación WinAPI - Sistema de Horarios
+
+CXX = g++
+WINDRES = windres
+CXXFLAGS = -std=c++17 -Wall -Wextra -O2 -DUNICODE -D_UNICODE
+LDFLAGS = -static-libgcc -static-libstdc++ -mwindows
+LIBS = -lcomctl32 -lcomdlg32 -lshell32 -lole32 -luuid
+
+# Archivos fuente
+SOURCES = main_winapi.cpp curso_manager.cpp
+HEADERS = curso_manager.h curso_data.h resource.h
+RESOURCES = resource.rc
+
+# Archivos objeto
+OBJECTS = $(SOURCES:.cpp=.o)
+RESOURCE_OBJ = resource.o
+
+# Archivo ejecutable
+TARGET = sistema_horarios_winapi.exe
+
+# Regla principal
+all: $(TARGET)
+
+# Compilar el ejecutable
+$(TARGET): $(OBJECTS) $(RESOURCE_OBJ)
+	$(CXX) $(LDFLAGS) -o $@ $^ $(LIBS)
+
+# Compilar archivos fuente
+%.o: %.cpp $(HEADERS)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Compilar recursos
+$(RESOURCE_OBJ): $(RESOURCES)
+	$(WINDRES) -i $< -o $@
+
+# Limpiar archivos compilados
+clean:
+	rm -f $(OBJECTS) $(RESOURCE_OBJ) $(TARGET)
+
+# Ejecutar la aplicación
+run: $(TARGET)
+	./$(TARGET)
+
+# Instalar dependencias (si es necesario)
+install-deps:
+	@echo "Asegúrate de tener MinGW-w64 instalado con g++ y windres"
+
+.PHONY: all clean run install-deps

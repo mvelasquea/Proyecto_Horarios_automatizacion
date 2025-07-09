@@ -1,0 +1,43 @@
+#include <windows.h>
+#include "resource.h"
+
+IDD_CURSO_DIALOG DIALOGEX 0, 0, 400, 300
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Agregar/Editar Curso"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Curso:",IDC_STATIC,20,20,50,12
+    EDITTEXT        IDC_EDIT_CURSO,80,18,100,14,ES_AUTOHSCROLL
+    
+    LTEXT           "Nombre:",IDC_STATIC,20,40,50,12
+    EDITTEXT        IDC_EDIT_NOMBRE,80,38,250,14,ES_AUTOHSCROLL
+    
+    LTEXT           "Grupo ID:",IDC_STATIC,20,65,50,12
+    EDITTEXT        IDC_EDIT_GRUPO_ID,80,63,100,14,ES_AUTOHSCROLL
+    
+    LTEXT           "Tipo:",IDC_STATIC,20,90,50,12
+    COMBOBOX        IDC_COMBO_TIPO,80,88,100,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    
+    LTEXT           "Aula:",IDC_STATIC,20,115,50,12
+    EDITTEXT        IDC_EDIT_AULA,80,113,100,14,ES_AUTOHSCROLL
+    
+    LTEXT           "Horas:",IDC_STATIC,20,140,50,12
+    EDITTEXT        IDC_EDIT_HORAS,80,138,250,14,ES_AUTOHSCROLL
+    
+    LTEXT           "Docente:",IDC_STATIC,20,165,50,12
+    EDITTEXT        IDC_EDIT_DOCENTE,80,163,250,14,ES_AUTOHSCROLL
+    
+    LTEXT           "Cupos:",IDC_STATIC,20,190,50,12
+    EDITTEXT        IDC_EDIT_CUPOS,80,188,60,14,ES_AUTOHSCROLL | ES_NUMBER
+    
+    LTEXT           "Formato de horas: 1_08:00-09:40 3_08:00-09:40",IDC_STATIC,20,215,300,12
+    LTEXT           "Donde: 1=Lunes, 2=Martes, 3=Miércoles, 4=Jueves, 5=Viernes",IDC_STATIC,20,230,300,12
+    LTEXT           "Tipo: F=Formal, L=Laboratorio",IDC_STATIC,20,245,200,12
+    
+    DEFPUSHBUTTON   "Guardar",IDC_BTN_OK,220,270,70,20
+    PUSHBUTTON      "Cancelar",IDC_BTN_CANCEL,300,270,70,20
+    
+    GROUPBOX        "Información del Curso",IDC_STATIC,10,5,360,260
+END
+    LTEXT           "Complete todos los campos para agregar o editar un curso.",IDC_STATIC,20,235,250,12
+END

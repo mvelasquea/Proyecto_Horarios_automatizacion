@@ -40,7 +40,5 @@ public:
     void imprimirGrafo() const;
     void imprimirDFS(Grupo* v, std::map<Grupo*, bool>& visitados) const;
     void imprimirGrafoDFS() const;
-    void generarHorarios();
     void verHorarios() const;
-    void crearRegistro() const;
 };

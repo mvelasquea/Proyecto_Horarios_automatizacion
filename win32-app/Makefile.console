@@ -1,0 +1,25 @@
+# Makefile para la versión de consola del Sistema de Horarios
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Wextra -O2
+
+# Archivo fuente y ejecutable
+SOURCE = sistema_horarios_console.cpp
+TARGET = sistema_horarios_console
+
+# Regla principal
+all: $(TARGET)
+
+# Compilar el ejecutable
+$(TARGET): $(SOURCE)
+	$(CXX) $(CXXFLAGS) -o $@ $<
+
+# Limpiar archivos temporales
+clean:
+	rm -f $(TARGET)
+
+# Ejecutar la aplicación
+run: $(TARGET)
+	./$(TARGET)
+
+# Reglas especiales
+.PHONY: all clean run

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Cursos y Grupos - Exportador CSV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestor de Cursos y Grupos</h1>
+            <p class="subtitle">Seleccione los cursos y grupos para exportar a CSV</p>
+        </header>
+
+        <div class="toolbar">
+            <button id="select-all" class="btn btn-primary">Seleccionar Todo</button>
+            <button id="deselect-all" class="btn btn-secondary">Deseleccionar Todo</button>
+            <button id="add-course" class="btn btn-success">Agregar Curso</button>
+            <button id="export-csv" class="btn btn-export">Exportar a CSV</button>
+        </div>
+
+        <div class="main-content">
+            <!-- Tabla de Cursos y Grupos -->
+            <div class="table-container">
+                <table id="courses-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" id="select-all-checkbox">
+                            </th>
+                            <th>Curso</th>
+                            <th>Grupo ID</th>
+                            <th>Tipo</th>
+                            <th>Aula</th>
+                            <th>Horas</th>
+                            <th>Docente</th>
+                            <th>Cupos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courses-tbody">
+                        <!-- Los datos se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Modal para agregar/editar curso -->
+        <div id="course-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Agregar Curso</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form id="course-form">
+                        <div class="form-group">
+                            <label for="curso-name">Curso:</label>
+                            <select id="curso-name" required>
+                                <option value="">Seleccione un curso</option>
+                                <option value="1701102">1701102 - RAZONAMIENTO LOGICO MATEMATICO</option>
+                                <option value="1701103">1701103 - MATEMATICA BASICA</option>
+                                <option value="1701104">1701104 - ESTRUCTURAS DISCRETAS 1</option>
+                                <option value="1701105">1701105 - INTRODUCCION A LA COMPUTACION</option>
+                                <option value="1701106">1701106 - FUNDAMENTOS DE LA PROGRAMACION 1</option>
+                                <option value="1701114">1701114 - METODOLOGIA DEL TRABAJO INTELECTUAL UNIVERSITARIO</option>
+                                <option value="1701210">1701210 - CALCULO EN UNA VARIABLE</option>
+                                <option value="1701211">1701211 - ESTRUCTURAS DISCRETAS 2</option>
+                                <option value="1701212">1701212 - PROGRAMACION WEB 1</option>
+                                <option value="1701213">1701213 - FUNDAMENTOS DE PROGRAMACION 2</option>
+                                <option value="1701216">1701216 - COMUNICACION INTEGRAL</option>
+                                <option value="1702119">1702119 - CALCULO EN VARIAS VARIABLES</option>
+                                <option value="1702122">1702122 - PROGRAMACION WEB 2</option>
+                                <option value="1703133">1703133 - ALGORITMOS Y PROGRAMACION</option>
+                                <option value="1703134">1703134 - ESTRUCTURAS DE DATOS</option>
+                                <option value="1703135">1703135 - INGENIERIA Y PROCESOS DE SOFTWARE</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="grupo-id">Grupo ID:</label>
+                            <input type="text" id="grupo-id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo">Tipo:</label>
+                            <select id="tipo" required>
+                                <option value="">Seleccione</option>
+                                <option value="TEORIA">TEORIA</option>
+                                <option value="PRACTICA">PRACTICA</option>
+                                <option value="LABORATORIO">LABORATORIO</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="aula">Aula:</label>
+                            <input type="text" id="aula" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="horas">Horas:</label>
+                            <input type="text" id="horas" placeholder="Ej: L:08-10, M:14-16" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="docente">Docente:</label>
+                            <input type="text" id="docente" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cupos">Cupos:</label>
+                            <input type="number" id="cupos" min="1" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="script_fixed.js"></script>
+    <script src="winapi_bridge.js"></script>
+</body>
+</html>

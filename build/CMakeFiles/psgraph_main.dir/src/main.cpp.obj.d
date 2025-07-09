@@ -187,7 +187,4 @@ CMakeFiles/psgraph_main.dir/src/main.cpp.obj: \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/array \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare \
  C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/PSGraph/Grafo_impl.hpp \
- C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Horario.hpp \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/set \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_set.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_multiset.h
+ C:/Users/sarv/UNSA/semestre_05/2-PS-B/proyecto-final-SH/sys-horario/include/Horario.hpp

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Horarios - Estilo WinAPI</title>
+    <style>
+        /* Estilos para simular WinAPI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MS Sans Serif', sans-serif;
+            font-size: 11px;
+            background-color: #c0c0c0;
+            color: #000000;
+            overflow: hidden;
+        }
+
+        .window {
+            border: 2px outset #c0c0c0;
+            background-color: #c0c0c0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title-bar {
+            background: linear-gradient(to right, #0080ff, #004080);
+            color: white;
+            padding: 2px 4px;
+            font-weight: bold;
+            font-size: 11px;
+            border-bottom: 1px solid #000080;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title-text {
+            padding-left: 4px;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 2px;
+        }
+
+        .control-btn {
+            width: 16px;
+            height: 14px;
+            background-color: #c0c0c0;
+            border: 1px outset #c0c0c0;
+            font-size: 8px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 12px;
+        }
+
+        .control-btn:active {
+            border: 1px inset #c0c0c0;
+        }
+
+        .toolbar {
+            background-color: #c0c0c0;
+            padding: 4px;
+            border-bottom: 1px solid #808080;
+            display: flex;
+            gap: 2px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: #c0c0c0;
+            border: 1px outset #c0c0c0;
+            padding: 2px 8px;
+            font-size: 11px;
+            cursor: pointer;
+            font-family: 'MS Sans Serif', sans-serif;
+        }
+
+        .btn:active {
+            border: 1px inset #c0c0c0;
+        }
+
+        .btn:hover {
+            background-color: #d0d0d0;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 8px;
+            background-color: #c0c0c0;
+            overflow: auto;
+        }
+
+        .listview {
+            border: 2px inset #c0c0c0;
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .listview table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        .listview th {
+            background-color: #c0c0c0;
+            border: 1px outset #c0c0c0;
+            padding: 2px 4px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+        .listview td {
+            padding: 1px 4px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 11px;
+        }
+
+        .listview tr:hover {
+            background-color: #316ac5;
+            color: white;
+        }
+
+        .listview tr.selected {
+            background-color: #316ac5;
+            color: white;
+        }
+
+        .checkbox {
+            width: 13px;
+            height: 13px;
+        }
+
+        .status-bar {
+            background-color: #c0c0c0;
+            border-top: 1px solid #808080;
+            padding: 2px 8px;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .status-panel {
+            border: 1px inset #c0c0c0;
+            padding: 1px 4px;
+            margin-right: 4px;
+        }
+
+        /* Modal Dialog */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #c0c0c0;
+            border: 2px outset #c0c0c0;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            background: linear-gradient(to right, #0080ff, #004080);
+            color: white;
+            padding: 2px 4px;
+            font-weight: bold;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-content {
+            padding: 8px;
+            background-color: #c0c0c0;
+        }
+
+        .form-group {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            width: 80px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            border: 1px inset #c0c0c0;
+            padding: 2px;
+            font-size: 11px;
+            width: 200px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 4px;
+            justify-content: flex-end;
+            margin-top: 8px;
+        }
+
+        .btn-primary {
+            background-color: #c0c0c0;
+            border: 1px outset #c0c0c0;
+            padding: 2px 16px;
+            font-size: 11px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .type-badge {
+            padding: 1px 3px;
+            font-size: 9px;
+            border: 1px solid #808080;
+            background-color: #f0f0f0;
+        }
+
+        .type-f {
+            background-color: #e0f0ff;
+            border-color: #0080ff;
+        }
+
+        .type-l {
+            background-color: #ffe0e0;
+            border-color: #ff0080;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-text">Sistema de Gestión de Horarios - Checklist de Cursos</div>
+            <div class="window-controls">
+                <div class="control-btn">_</div>
+                <div class="control-btn">□</div>
+                <div class="control-btn">×</div>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <button class="btn" id="select-all">Seleccionar Todo</button>
+            <button class="btn" id="deselect-all">Deseleccionar Todo</button>
+            <div style="width: 4px;"></div>
+            <button class="btn" id="add-course">Agregar Curso</button>
+            <button class="btn" id="edit-course">Editar Curso</button>
+            <button class="btn" id="delete-course">Eliminar Curso</button>
+            <div style="width: 4px;"></div>
+            <button class="btn" id="export-csv">Exportar CSV</button>
+            <button class="btn" id="show-format">Formato Horas</button>
+        </div>
+
+        <div class="content-area">
+            <div class="listview">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30px;">Sel</th>
+                            <th style="width: 80px;">Curso</th>
+                            <th style="width: 200px;">Nombre</th>
+                            <th style="width: 60px;">Grupo</th>
+                            <th style="width: 40px;">Tipo</th>
+                            <th style="width: 60px;">Aula</th>
+                            <th style="width: 180px;">Horas</th>
+                            <th style="width: 150px;">Docente</th>
+                            <th style="width: 50px;">Cupos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courses-tbody">
+                        <!-- Datos cargados dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <div>
+                <span class="status-panel" id="total-courses">Total: 0</span>
+                <span class="status-panel" id="selected-courses">Seleccionados: 0</span>
+            </div>
+            <div class="status-panel">Sistema de Horarios v1.0</div>
+        </div>
+    </div>
+
+    <!-- Modal Dialog -->
+    <div class="modal" id="course-modal">
+        <div class="modal-header">
+            <div id="modal-title">Agregar Curso</div>
+            <div class="control-btn" onclick="closeModal()">×</div>
+        </div>
+        <div class="modal-content">
+            <form id="course-form">
+                <div class="form-group">
+                    <label>Curso:</label>
+                    <input type="text" id="curso-code" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" id="curso-name" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label>Grupo ID:</label>
+                    <input type="text" id="grupo-id" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label>Tipo:</label>
+                    <select id="tipo" required>
+                        <option value="F">F - Formal</option>
+                        <option value="L">L - Laboratorio</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Aula:</label>
+                    <input type="text" id="aula" maxlength="20" required>
+                </div>
+                <div class="form-group">
+                    <label>Horas:</label>
+                    <input type="text" id="horas" maxlength="50" required placeholder="1_08:00-09:40 3_08:00-09:40">
+                </div>
+                <div class="form-group">
+                    <label>Docente:</label>
+                    <input type="text" id="docente" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label>Cupos:</label>
+                    <input type="number" id="cupos" min="1" max="100" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Aceptar</button>
+                    <button type="button" class="btn-primary" onclick="closeModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="winapi_script.js"></script>
+</body>
+</html>
