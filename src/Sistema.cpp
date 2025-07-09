@@ -36,6 +36,7 @@ void Sistema::cargarGrafo() {
 
 void Sistema::imprimirGrafo() const {
     std::cout << "=== Grafo de Grupos y sus vecinos compatibles ===\n";
+    std::cout << "Total de nodos (grupos): " << grafoGrupos.obtenerVertices().size() << "\n";
     for (auto v : grafoGrupos.obtenerVertices()) {
         std::cout << "Grupo: " << v->getIdGrupo()
                   << " | Curso: " << v->getCurso()->getCodigo() << "\nVecinos: ";
@@ -313,4 +314,77 @@ bool Sistema::sonCompatibles(const Grupo* g1, const Grupo* g2) const {
         }
     }
     return true;
+}
+
+void Sistema::generarHorarios() {
+    // 1. Selecciona solo cursos con grupos
+    vector<Curso*> cursosASeleccionar;
+    for (auto& [codigo, curso] : cursos)
+        if (curso.getGrupos().size() > 0)
+            cursosASeleccionar.push_back(&curso);
+
+    vector<Grupo*> seleccionados;
+
+    // 2. Función recursiva (backtracking)
+    function<void(int)> backtrack = [&](int idx) {
+        if (idx == cursosASeleccionar.size()) {
+            // Guarda un horario válido
+            horarios.emplace_back(seleccionados);
+            return;
+        }
+        Curso* curso = cursosASeleccionar[idx];
+
+        // Intenta todos los grupos teóricos
+        for (Grupo* teorico : curso->getGruposTeoricos()) {
+            bool ok = true;
+            for (Grupo* g : seleccionados)
+                if (!sonCompatibles(g, teorico)) { ok = false; break; }
+            if (!ok) continue;
+
+            // Si el curso tiene laboratorio, intenta cada lab compatible
+            if (curso->tieneLaboratorio()) {
+                for (Grupo* lab : curso->getGruposLaboratorio()) {
+                    ok = true;
+                    for (Grupo* g : seleccionados)
+                        if (!sonCompatibles(g, lab)) { ok = false; break; }
+                    if (!sonCompatibles(teorico, lab)) ok = false;
+                    if (!ok) continue;
+                    seleccionados.push_back(teorico);
+                    seleccionados.push_back(lab);
+                    backtrack(idx + 1);
+                    seleccionados.pop_back();
+                    seleccionados.pop_back();
+                }
+            } else {
+                // Si no hay laboratorio, solo el teórico
+                seleccionados.push_back(teorico);
+                backtrack(idx + 1);
+                seleccionados.pop_back();
+            }
+        }
+    };
+
+    // 3. Llama la recursión inicial
+    backtrack(0);
+}
+
+void Sistema::verHorarios() const {
+    std::cout << "\n======= Horarios Generados =======\n";
+    if (horarios.empty()) {
+        std::cout << "No se han generado horarios.\n";
+        return;
+    }
+    int num = 1;
+    for (const Horario& horario : horarios) {
+        std::cout << "Horario #" << num++ << ":\n";
+        for (Grupo* grupo : horario.getGrupos()) {
+            std::cout << "  Curso: " << grupo->getCurso()->getCodigo()
+                      << " | Nombre: " << grupo->getCurso()->getNombre()
+                      << " | Grupo: " << grupo->getIdGrupo()
+                      << " | Tipo: " << (grupo->esLab() ? "Lab" : "Teorico")
+                      << " | Docente: " << grupo->getDocente()
+                      << "\n";
+        }
+        std::cout << "----------------------------\n";
+    }
 }

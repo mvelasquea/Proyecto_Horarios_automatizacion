@@ -55,7 +55,12 @@ public:
     void agregarGrupo(const Grupo& grupo) { grupos.push_back(grupo); }
 
     // --- Laboratorios ---
-    bool tieneLaboratorio() const { return horasLaboratorio > 0; }
+    bool tieneLaboratorio() const {
+        for (const auto& g : grupos) {
+            if (g.esLab()) return true;
+        }
+        return false;
+    }
     bool requiereLaboratorio() const { return horasLaboratorio > 0; }
 
     // --- Filtrado de grupos ---

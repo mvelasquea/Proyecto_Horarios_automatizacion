@@ -7,45 +7,32 @@ using namespace std;
 class Horario {
 private:
     vector<Grupo*> gruposSeleccionados; // Un grupo por curso
-    int horasHueco;                    // Total de horas vacías entre clases
-    int diasLibres;                    // Número de días sin clases
-    int maxCreditosPorDia;             // Máximo crédito en un solo día
-    int costoTotal;                    // Valor para evaluar preferencia general
+    int horasHueco = 0;
+    int diasLibres = 0;
 
 public:
     // Constructor por defecto
-    Horario() : horasHueco(0), diasLibres(0), maxCreditosPorDia(0), costoTotal(0) {}
-    
-    // Constructor con grupos - CORREGIDO
-    Horario(const vector<Grupo*>& grupos) : gruposSeleccionados(grupos), 
-                                          horasHueco(0), 
-                                          diasLibres(0), 
-                                          maxCreditosPorDia(0), 
-                                          costoTotal(0) {}
-    
-    // Métodos para manipulación de grupos
-    void agregarGrupo(Grupo* grupo) {
-        gruposSeleccionados.push_back(grupo);
-    }
+    Horario() = default;
 
-    // Getters
-    const vector<Grupo*>& getGrupos() const {
-        return gruposSeleccionados;
-    }
-    
-    vector<Grupo*>& getGrupos() {
-        return gruposSeleccionados;
-    }
+    // Constructor con vector de grupos
+    Horario(const vector<Grupo*>& grupos)
+        : gruposSeleccionados(grupos) {}
 
-    // Métodos para calcular métricas
-    void calcularHorasHueco();
-    void calcularDiasLibres();
-    void calcularMaxCreditosPorDia();
-    void calcularCostoTotal();
+    // Getter del vector (const y no const)
+    const vector<Grupo*>& getGrupos() const { return gruposSeleccionados; }
+    vector<Grupo*>& getGrupos() { return gruposSeleccionados; }
 
-    // Getters para métricas
+    // Setter del vector
+    void setGrupos(const vector<Grupo*>& grupos) { gruposSeleccionados = grupos; }
+
+    // Agregar grupo
+    void agregarGrupo(Grupo* grupo) { gruposSeleccionados.push_back(grupo); }
+
+    // Getters de métricas
     int getHorasHueco() const { return horasHueco; }
     int getDiasLibres() const { return diasLibres; }
-    int getMaxCreditosPorDia() const { return maxCreditosPorDia; }
-    int getCostoTotal() const { return costoTotal; }
+
+    // Setters de métricas
+    void setHorasHueco(int val) { horasHueco = val; }
+    void setDiasLibres(int val) { diasLibres = val; }
 };

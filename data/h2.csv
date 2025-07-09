@@ -1,10 +1,10 @@
 curso,grupo_id,tipo,aula,horas,docente,cupos
 1703133,1,F,B201,"1_08:00-09:40 3_08:00-09:40",María López,25
-1703133,2,F,B202,"1_08:30-10:10 3_08:30-10:10",Carlos Sánchez,28  # choque horario con grupo 1
-1703133,101,L,Lab1,"2_10:00-11:40",Juan Pérez,18               # laboratorio, horario distinto
-1703134,1,F,C105,"1_08:00-09:40 3_08:00-09:40",Laura Méndez,22
-1703134,2,F,C106,"1_09:00-10:40 3_09:00-10:40",Diego Castillo,21  # choque horario con grupo 1
-1703134,101,L,Lab5,"2_10:00-11:40",Andrés López,19              # laboratorio, horario distinto
-1703135,1,F,D303,"1_10:00-11:40 3_10:00-11:40",Ana Martínez,18
-1703135,2,F,D304,"1_10:30-12:10 3_10:30-12:10",Ricardo Torres,19  # choque horario con grupo 1
-1703135,101,L,Lab9,"2_14:00-15:40",Claudia Ruiz,15              # laboratorio, horario distinto
+1703133,2,F,B202,"1_10:00-11:40 3_10:00-11:40",Carlos Sánchez,28
+1703133,101,L,Lab1,"2_12:00-13:40",Juan Pérez,18
+1703134,1,F,C105,"2_08:00-09:40 4_08:00-09:40",Laura Méndez,22
+1703134,2,F,C106,"2_10:00-11:40 4_10:00-11:40",Diego Castillo,21
+1703134,101,L,Lab5,"3_12:00-13:40",Andrés López,19
+1703135,1,F,D303,"3_08:00-09:40 5_08:00-09:40",Ana Martínez,18
+1703135,2,F,D304,"3_10:00-11:40 5_10:00-11:40",Ricardo Torres,19
+1703135,101,L,Lab9,"4_12:00-13:40",Claudia Ruiz,15

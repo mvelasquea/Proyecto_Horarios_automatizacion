@@ -10,9 +10,16 @@ int main() {
         sistema.cargarGrupos("../data/h2.csv");
         //sistema.imprimirGrupos();
         sistema.cargarGrafo();
-        sistema.imprimirGrafo();
-        //sistema.generarHorarios(true);
-        //sistema.verHorarios();
+        //sistema.imprimirGrafo();
+        for (auto& [codigo, curso] : sistema.getCursos()) {
+            std::cout << "Curso: " << codigo << ", grupos: " << curso.getGrupos().size() << "\n";
+            for (const auto& grupo : curso.getGrupos()) {
+                std::cout << "  Grupo: " << grupo.getIdGrupo()
+                        << ", Tipo: " << (grupo.esLab() ? "Lab" : "Teorico") << "\n";
+            }
+        }
+        sistema.generarHorarios();
+        sistema.verHorarios();
 
         std::cout << "Datos cargados correctamente.\n";
     } catch (const std::exception& e) {
