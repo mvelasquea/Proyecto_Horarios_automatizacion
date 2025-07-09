@@ -5,9 +5,9 @@
 int main() {
     try {
         Sistema sistema;
-        sistema.cargarCursos("../data/ESPIS-cursos-2017.csv");
+        sistema.cargarCursos("../data/input/ESPIS-cursos-2017.csv");
         //sistema.imprimirCursos();
-        sistema.cargarGrupos("../data/h2.csv");
+        sistema.cargarGrupos("../data/input/h1.csv");
         //sistema.imprimirGrupos();
         sistema.cargarGrafo();
         //sistema.imprimirGrafo();
@@ -19,7 +19,8 @@ int main() {
             }
         }
         sistema.generarHorarios();
-        sistema.verHorarios();
+        //sistema.verHorarios();
+        sistema.crearRegistro();
 
         std::cout << "Datos cargados correctamente.\n";
     } catch (const std::exception& e) {

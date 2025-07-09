@@ -42,4 +42,5 @@ public:
     void imprimirGrafoDFS() const;
     void generarHorarios();
     void verHorarios() const;
+    void crearRegistro() const;
 };

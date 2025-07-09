@@ -325,30 +325,40 @@ void Sistema::generarHorarios() {
 
     vector<Grupo*> seleccionados;
 
-    // 2. Función recursiva (backtracking)
+    // 2. Función recursiva (backtracking usando el grafo)
     function<void(int)> backtrack = [&](int idx) {
         if (idx == cursosASeleccionar.size()) {
-            // Guarda un horario válido
             horarios.emplace_back(seleccionados);
             return;
         }
         Curso* curso = cursosASeleccionar[idx];
 
-        // Intenta todos los grupos teóricos
+        // Probar todos los grupos teóricos
         for (Grupo* teorico : curso->getGruposTeoricos()) {
             bool ok = true;
-            for (Grupo* g : seleccionados)
-                if (!sonCompatibles(g, teorico)) { ok = false; break; }
+            for (Grupo* g : seleccionados) {
+                // Usar el grafo: debe haber arista (compatibilidad)
+                if (!grafoGrupos.contieneArista(Arista<Grupo*>(g, teorico, false))) {
+                    ok = false;
+                    break;
+                }
+            }
             if (!ok) continue;
 
-            // Si el curso tiene laboratorio, intenta cada lab compatible
+            // Si hay laboratorio, igual pero usando grafo también
             if (curso->tieneLaboratorio()) {
                 for (Grupo* lab : curso->getGruposLaboratorio()) {
                     ok = true;
-                    for (Grupo* g : seleccionados)
-                        if (!sonCompatibles(g, lab)) { ok = false; break; }
-                    if (!sonCompatibles(teorico, lab)) ok = false;
+                    for (Grupo* g : seleccionados) {
+                        if (!grafoGrupos.contieneArista(Arista<Grupo*>(g, lab, false))) {
+                            ok = false;
+                            break;
+                        }
+                    }
+                    // Verificar que teoría y lab también sean vecinos en grafo
+                    if (!grafoGrupos.contieneArista(Arista<Grupo*>(teorico, lab, false))) ok = false;
                     if (!ok) continue;
+
                     seleccionados.push_back(teorico);
                     seleccionados.push_back(lab);
                     backtrack(idx + 1);
@@ -356,7 +366,6 @@ void Sistema::generarHorarios() {
                     seleccionados.pop_back();
                 }
             } else {
-                // Si no hay laboratorio, solo el teórico
                 seleccionados.push_back(teorico);
                 backtrack(idx + 1);
                 seleccionados.pop_back();
@@ -387,4 +396,46 @@ void Sistema::verHorarios() const {
         }
         std::cout << "----------------------------\n";
     }
+}
+
+void Sistema::crearRegistro() const {
+    std::ofstream fout("../data/output/horarios.csv");
+    if (!fout.is_open()) {
+        std::cerr << "No se pudo abrir el archivo para escribir: ./data/output/horarios.csv\n";
+        return;
+    }
+
+    fout << "horainicio,horafin,dia,curso,grupo,tipo,codigo,profesor,codigo_horario\n";
+
+    // Días de la semana
+    const std::string diasSemana[] = {"", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
+
+    int codigo_horario = 1;
+    for (const auto& horario : horarios) {
+        for (Grupo* grupo : horario.getGrupos()) {
+            for (const Hora& hora : grupo->getHoras()) {
+                auto minutosAString = [](int m) {
+                    std::ostringstream oss;
+                    oss << std::setw(2) << std::setfill('0') << (m/60)
+                        << ":" << std::setw(2) << std::setfill('0') << (m%60);
+                    return oss.str();
+                };
+
+                fout
+                    << minutosAString(hora.getInicio()) << ","
+                    << minutosAString(hora.getFin()) << ","
+                    << diasSemana[hora.getDia()] << ","
+                    << grupo->getCurso()->getNombreAbreviado() << ","
+                    << grupo->getIdGrupo() << ","
+                    << (grupo->esLab() ? "Lab" : "Teo") << ","
+                    << grupo->getCurso()->getCodigo() << ","
+                    << grupo->getDocente() << ","
+                    << codigo_horario << "\n";
+            }
+        }
+        ++codigo_horario;
+    }
+
+    fout.close();
+    std::cout << "Archivo generado correctamente: ./data/output/horarios.csv" << std::endl;
 }

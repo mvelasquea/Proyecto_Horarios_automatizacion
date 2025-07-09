@@ -1,0 +1,25 @@
+horainicio,horafin,dia,curso,grupo,tipo,codigo,profesor,codigo_horario
+08:00,10:00,Lunes,Raz. Log. Mat.,TA,Teo,1701102,Ing. Castro,1
+10:00,11:30,Lunes,Est. Discretas I,TA,Teo,1701104,Ing. Ruiz,1
+14:00,15:30,Luno,Intro. Comput.,TA,Teo,1701105,Ing. Medina,1
+08:00,10:00,Martes,Mat. Básica,TA,Teo,1701103,Ing. Lopez,1
+14:00,16:00,Martes,Rel. Humanas SW,TA,Teo,1701145,Ing. Lopez,1
+08:00,10:00,Miércoles,Met. Trab. Int.,TA,Teo,1701114,Ing. Castro,1
+10:00,12:00,Jueves,Cálculo 1 Var.,TA,Teo,1701210,Ing. Ruiz,1
+
+08:00,10:00,Martes,Raz. Log. Mat.,TB,Teo,1701102,Ing. Medina,2
+10:00,11:30,Martes,Est. Discretas I,TB,Teo,1701104,Ing. Lopez,2
+14:00,15:30,Martes,Intro. Comput.,TB,Teo,1701105,Ing. Ruiz,2
+08:00,10:00,Miércoles,Mat. Básica,TB,Teo,1701103,Ing. Castro,2
+14:00,16:00,Miércoles,Rel. Humanas SW,TB,Teo,1701145,Ing. Castro,2
+08:00,10:00,Jueves,Met. Trab. Int.,TB,Teo,1701114,Ing. Medina,2
+10:00,12:00,Viernes,Cálculo 1 Var.,TB,Teo,1701210,Ing. Lopez,2
+
+08:00,10:00,Miércoles,Raz. Log. Mat.,TC,Teo,1701102,Ing. Ruiz,3
+11:00,12:00,Miércoles,Raz. Log. Mat.,TC,Teo,1701102,Ing. Ruiz,3
+10:00,11:30,Miércoles,Est. Discretas I,TC,Teo,1701104,Ing. Castro,3
+14:00,15:30,Miércoles,Intro. Comput.,TC,Teo,1701105,Ing. Lopez,3
+08:00,10:00,Jueves,Mat. Básica,TC,Teo,1701103,Ing. Medina,3
+14:00,16:00,Jueves,Rel. Humanas SW,TC,Teo,1701145,Ing. Medina,3
+08:00,10:00,Viernes,Met. Trab. Int.,TC,Teo,1701114,Ing. Ruiz,3
+10:00,12:00,Lunes,Cálculo 1 Var.,TC,Teo,1701210,Ing. Castro,3
